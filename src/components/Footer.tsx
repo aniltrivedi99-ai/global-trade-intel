@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container py-12 grid gap-8 md:grid-cols-4">
       <div>
         <h3 className="text-lg font-bold mb-3">
-          Export<span className="text-accent">Intelligence</span>
+          Trade<span className="text-accent">Intelligence</span>
         </h3>
         <p className="text-sm text-primary-foreground/70 leading-relaxed">
           Empowering businesses with data-driven insights for smarter global trade decisions.
@@ -32,7 +32,7 @@ const Footer = () => (
       <div>
         <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">Contact</h4>
         <ul className="space-y-2 text-sm text-primary-foreground/70">
-          <li>info@exportintelligence.com</li>
+          <li>info@tradeintelligence.com</li>
           <li>+1 (555) 234-5678</li>
           <li>New York, NY</li>
         </ul>
@@ -40,7 +40,7 @@ const Footer = () => (
     </div>
     <div className="border-t border-primary-foreground/10">
       <div className="container py-4 text-center text-xs text-primary-foreground/50">
-        © {new Date().getFullYear()} Export Intelligence. All rights reserved.
+        © {new Date().getFullYear()} Trade Intelligence. All rights reserved.
       </div>
     </div>
   </footer>
