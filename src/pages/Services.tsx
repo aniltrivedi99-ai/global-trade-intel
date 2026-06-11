@@ -25,7 +25,7 @@ const services = [
     icon: ShieldCheck,
     title: "Compliance Advisory",
     desc: "Ensure full compliance with export controls, sanctions, and international trade regulations.",
-    features: ["Certifications", "Import Regulations", "Export Regulations"],
+    features: ["Certifications", "Import Regulations", "Export Regulations", "Export policies", "Export Incentives"],
   },
   {
     icon: FileText,
