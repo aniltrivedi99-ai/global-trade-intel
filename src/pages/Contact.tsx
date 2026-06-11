@@ -34,9 +34,9 @@ const Contact = () => {
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: "Email", value: "info@tradeintelligence.com" },
-                  { icon: Phone, label: "Phone", value: "+1 (555) 234-5678" },
-                  { icon: MapPin, label: "Office", value: "350 Fifth Ave, New York, NY 10118" },
+                  { icon: Mail, label: "Email", value: "aniltrivedi.impex@outlook.com" },
+                  { icon: Phone, label: "Phone", value: "+91 9870446898" },
+                  { icon: MapPin, label: "Office", value: "B-602, Solitaire Paradise, M.G. Cross Road No.1, Kandivali (West, Mumbai 400067, Maharashtra, India." },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-3">
                     <c.icon className="h-5 w-5 text-accent mt-0.5" />

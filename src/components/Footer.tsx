@@ -32,9 +32,9 @@ const Footer = () => (
       <div>
         <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">Contact</h4>
         <ul className="space-y-2 text-sm text-primary-foreground/70">
-          <li>info@tradeintelligence.com</li>
-          <li>+1 (555) 234-5678</li>
-          <li>New York, NY</li>
+          <li>aniltrivedi.impex@outlook.com</li>
+          <li>+91 9870446898</li>
+          <li>B-602, Solitaire Paradise, M.G. Cross Road No.1, Kandivali (West, Mumbai 400067, Maharashtra, India.</li>
         </ul>
       </div>
     </div>
