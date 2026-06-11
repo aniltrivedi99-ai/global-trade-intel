@@ -19,7 +19,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="text-xl font-bold text-primary tracking-tight">
-          Export<span className="text-accent">Intelligence</span>
+          Trade<span className="text-accent">Intelligence</span>
         </Link>
 
         {/* Desktop */}

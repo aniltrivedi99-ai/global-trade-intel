@@ -12,7 +12,7 @@ const About = () => (
     {/* Header */}
     <section className="bg-primary text-primary-foreground py-20">
       <div className="container text-center max-w-2xl">
-        <h1 className="text-4xl font-bold mb-4">About Export Intelligence</h1>
+        <h1 className="text-4xl font-bold mb-4">About Trade Intelligence</h1>
         <p className="text-primary-foreground/70 text-lg">
           We combine deep trade expertise with cutting-edge data analytics to help businesses thrive in global markets.
         </p>

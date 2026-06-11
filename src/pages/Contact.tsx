@@ -34,7 +34,7 @@ const Contact = () => {
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: "Email", value: "info@exportintelligence.com" },
+                  { icon: Mail, label: "Email", value: "info@tradeintelligence.com" },
                   { icon: Phone, label: "Phone", value: "+1 (555) 234-5678" },
                   { icon: MapPin, label: "Office", value: "350 Fifth Ave, New York, NY 10118" },
                 ].map((c) => (

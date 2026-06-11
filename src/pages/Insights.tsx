@@ -69,7 +69,7 @@ const Insights = () => (
         {articles.map((a) => (
           <article key={a.title} className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow group cursor-pointer">
             <div className="h-40 bg-secondary flex items-center justify-center">
-              <span className="text-4xl text-muted-foreground/20 font-bold">EI</span>
+              <span className="text-4xl text-muted-foreground/20 font-bold">TI</span>
             </div>
             <div className="p-6 space-y-3">
               <div className="flex items-center gap-2">
