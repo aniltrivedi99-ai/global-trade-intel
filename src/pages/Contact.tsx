@@ -4,13 +4,31 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    const { error } = await supabase.from("contact_inquiries").insert({
+      name: form.name.trim(),
+      email: form.email.trim(),
+      company: form.company.trim() || null,
+      message: form.message.trim(),
+    });
+    setSubmitting(false);
+    if (error) {
+      toast({
+        title: "Couldn't send message",
+        description: "Please try again, or email us directly at aniltrivedi.impex@outlook.com.",
+        variant: "destructive",
+      });
+      return;
+    }
     toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
     setForm({ name: "", email: "", company: "", message: "" });
   };
@@ -105,8 +123,8 @@ const Contact = () => {
                   placeholder="Tell us about your export goals..."
                 />
               </div>
-              <Button type="submit" size="lg">
-                <Send className="mr-2 h-4 w-4" /> Send Message
+              <Button type="submit" size="lg" disabled={submitting}>
+                <Send className="mr-2 h-4 w-4" /> {submitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
