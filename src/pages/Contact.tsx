@@ -123,8 +123,8 @@ const Contact = () => {
                   placeholder="Tell us about your export goals..."
                 />
               </div>
-              <Button type="submit" size="lg">
-                <Send className="mr-2 h-4 w-4" /> Send Message
+              <Button type="submit" size="lg" disabled={submitting}>
+                <Send className="mr-2 h-4 w-4" /> {submitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
