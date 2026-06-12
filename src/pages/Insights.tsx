@@ -1,49 +1,6 @@
 import { Clock, ArrowRight } from "lucide-react";
-
-const articles = [
-  {
-    title: "Top 10 Emerging Export Markets in 2026",
-    excerpt: "Discover which markets are poised for significant growth and how to position your business to take advantage.",
-    category: "Market Trends",
-    date: "Apr 10, 2026",
-    readTime: "5 min",
-  },
-  {
-    title: "Understanding New EU Trade Regulations",
-    excerpt: "A comprehensive breakdown of the latest EU trade policy changes and their impact on exporters worldwide.",
-    category: "Trade Policy",
-    date: "Apr 5, 2026",
-    readTime: "8 min",
-  },
-  {
-    title: "How AI Is Transforming Trade Data Analysis",
-    excerpt: "Machine learning and AI are revolutionizing how businesses analyze trade flows and predict market movements.",
-    category: "Technology",
-    date: "Mar 28, 2026",
-    readTime: "6 min",
-  },
-  {
-    title: "Supply Chain Resilience: Lessons from 2025",
-    excerpt: "Key takeaways from last year's supply chain disruptions and strategies for building more resilient networks.",
-    category: "Supply Chain",
-    date: "Mar 20, 2026",
-    readTime: "7 min",
-  },
-  {
-    title: "ASEAN Free Trade Agreements: Opportunities for Exporters",
-    excerpt: "How to leverage ASEAN's expanding trade agreements for competitive advantage in Southeast Asian markets.",
-    category: "Market Trends",
-    date: "Mar 12, 2026",
-    readTime: "6 min",
-  },
-  {
-    title: "Export Compliance Checklist for New Exporters",
-    excerpt: "Essential steps every new exporter should follow to ensure compliance with international trade regulations.",
-    category: "Compliance",
-    date: "Mar 5, 2026",
-    readTime: "4 min",
-  },
-];
+import { Link } from "react-router-dom";
+import { articles } from "@/data/articles";
 
 const categoryColors: Record<string, string> = {
   "Market Trends": "bg-accent/10 text-accent",
@@ -67,7 +24,11 @@ const Insights = () => (
     <section className="container py-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((a) => (
-          <article key={a.title} className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow group cursor-pointer">
+          <Link
+            to={`/insights/${a.slug}`}
+            key={a.slug}
+            className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow group"
+          >
             <div className="h-40 bg-secondary flex items-center justify-center">
               <span className="text-4xl text-muted-foreground/20 font-bold">TI</span>
             </div>
@@ -89,7 +50,7 @@ const Insights = () => (
                 </span>
               </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
