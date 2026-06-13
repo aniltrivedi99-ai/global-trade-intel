@@ -22,12 +22,6 @@ const services = [
     features: ["Custom dashboards", "Trade flow analysis", "Tariff impact modeling", "Supply chain mapping"],
   },
   {
-    icon: ShieldCheck,
-    title: "Compliance Advisory",
-    desc: "Ensure full compliance with export controls, sanctions, and international trade regulations.",
-    features: ["Certifications", "Import Regulations", "Export Regulations", "Export policies", "Export Incentives"],
-  },
-  {
     icon: FileText,
     title: "Custom Reports",
     desc: "Tailored research reports designed to answer your specific market questions.",
