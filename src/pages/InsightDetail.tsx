@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Clock } from "lucide-react";
 import { articles } from "@/data/articles";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const InsightDetail = () => {
   const { slug } = useParams<{ slug: string }>();

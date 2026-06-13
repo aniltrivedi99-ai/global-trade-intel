@@ -1,6 +1,7 @@
 import { Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
+import SEO from "@/components/SEO";
 
 const categoryColors: Record<string, string> = {
   "Market Trends": "bg-accent/10 text-accent",
@@ -12,6 +13,12 @@ const categoryColors: Record<string, string> = {
 
 const Insights = () => (
   <div>
+    <SEO
+      title="Trade Insights | Export Market Research, Compliance & Buyer Intelligence"
+      description="Expert insights on global trade, export markets, customs and trade compliance, buyer due diligence, KYC and supply chain strategy."
+      path="/insights"
+      keywords="trade insights, export market research, trade compliance, customs, buyer due diligence, KYC, supply chain, international trade analysis"
+    />
     <section className="bg-primary text-primary-foreground py-20">
       <div className="container text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-4">Insights & Analysis</h1>

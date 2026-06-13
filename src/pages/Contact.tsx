@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -35,6 +36,12 @@ const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact Trade Intelligence | Export-Import Consulting, Mumbai India"
+        description="Talk to our export-import consultants for trade data, buyer search, KYC, due diligence and customs compliance. Based in Kandivali (West), Mumbai, India."
+        path="/contact"
+        keywords="contact export consultant, import export consultant Mumbai, trade advisory India, buyer search KYC contact"
+      />
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container text-center max-w-2xl">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
