@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Globe, Search, ShieldCheck, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-globe.jpg";
 
 const stats = [
@@ -20,6 +21,12 @@ const services = [
 
 const Index = () => (
   <div>
+    <SEO
+      title="Export & Import Consulting | Trade Intelligence, Buyer Search & KYC"
+      description="Data-driven export-import consulting: global trade analytics, buyer search & KYC, due diligence, customs and trade compliance, market research and export strategy."
+      path="/"
+      keywords="export consulting, import consulting, trade intelligence, trade data analytics, buyer search, KYC, due diligence, customs compliance, trade compliance, market research, export strategy, risk analysis"
+    />
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <img src={heroImage} alt="Global trade network" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />

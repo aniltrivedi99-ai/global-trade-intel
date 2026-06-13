@@ -1,4 +1,5 @@
 import { Target, Eye, Users } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const team = [
   { name: "Sarah Chen", role: "CEO & Founder", bio: "20+ years in international trade policy and market strategy." },
@@ -9,6 +10,12 @@ const team = [
 
 const About = () => (
   <div>
+    <SEO
+      title="About Trade Intelligence | Export-Import Consultants in Mumbai, India"
+      description="Trade Intelligence helps exporters and importers grow globally with trade data analytics, buyer search, KYC, due diligence and customs compliance expertise."
+      path="/about"
+      keywords="export import consultants India, trade advisory Mumbai, international trade experts, export consulting firm, buyer verification, KYC due diligence"
+    />
     {/* Header */}
     <section className="bg-primary text-primary-foreground py-20">
       <div className="container text-center max-w-2xl">

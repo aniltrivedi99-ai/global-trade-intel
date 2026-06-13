@@ -1,6 +1,7 @@
 import { Globe, BarChart3, TrendingUp, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const services = [
   {
