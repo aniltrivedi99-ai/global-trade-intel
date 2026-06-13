@@ -27,6 +27,10 @@ const Footer = () => (
           <li>Market Intelligence</li>
           <li>Trade Data Analysis</li>
           <li>Compliance Advisory</li>
+          <li>Buyer Search &amp; Due Diligence</li>
+          <li>Risk Analysis</li>
+          <li>Export Strategy</li>
+          <li>Trade Compliance</li>
         </ul>
       </div>
       <div>
