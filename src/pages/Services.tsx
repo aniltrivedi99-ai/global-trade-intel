@@ -1,6 +1,7 @@
 import { Globe, BarChart3, TrendingUp, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const services = [
   {
@@ -31,6 +32,12 @@ const services = [
 
 const Services = () => (
   <div>
+    <SEO
+      title="Services | Export Consulting, Buyer Search, KYC, Due Diligence & Trade Compliance"
+      description="Export consulting, market intelligence, trade data analytics, buyer search & due diligence, KYC verification, risk analysis, export strategy and customs & trade compliance services."
+      path="/services"
+      keywords="export consulting services, import services, buyer search, due diligence, KYC, trade compliance, customs compliance, market research, trade data analytics, risk analysis, export strategy"
+    />
     <section className="bg-primary text-primary-foreground py-20">
       <div className="container text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-4">Our Services</h1>
