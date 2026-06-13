@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Globe, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight, BarChart3, Globe, Search, ShieldCheck, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-globe.jpg";
 
@@ -14,6 +14,7 @@ const services = [
   { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
   { icon: BarChart3, title: "Market Intelligence", desc: "In-depth analysis of global markets, demand trends, and competitive landscapes." },
   { icon: TrendingUp, title: "Trade Data Analytics", desc: "Actionable insights from real-time trade data and economic indicators." },
+  { icon: Search, title: "Buyer Search & Due Diligence", desc: "Identify and verify reliable international buyers with comprehensive background checks." },
   
 ];
 
