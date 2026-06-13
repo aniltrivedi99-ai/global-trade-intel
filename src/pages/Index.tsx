@@ -14,7 +14,7 @@ const services = [
   { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
   { icon: BarChart3, title: "Market Intelligence", desc: "In-depth analysis of global markets, demand trends, and competitive landscapes." },
   { icon: TrendingUp, title: "Trade Data Analytics", desc: "Actionable insights from real-time trade data and economic indicators." },
-  { icon: ShieldCheck, title: "Compliance Advisory", desc: "Navigate export regulations, tariffs, and trade compliance with confidence." },
+  
 ];
 
 const Index = () => (
