@@ -1,4 +1,4 @@
-import { Globe, BarChart3, TrendingUp, ShieldCheck, FileText, ArrowRight } from "lucide-react";
+import { Globe, BarChart3, TrendingUp, Search, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
@@ -14,7 +14,7 @@ const services = [
     icon: BarChart3,
     title: "Market Intelligence",
     desc: "Make informed decisions with comprehensive market research and competitive analysis.",
-    features: ["Demand forecasting", "Competitor mapping", "Consumer insights", "Opportunity scoring"],
+    features: ["Demand forecasting", "Competitor mapping", "Consumer insights", "Opportunity scoring", "Country Profiles", "Sector Deep Dives"],
   },
   {
     icon: TrendingUp,
@@ -23,10 +23,10 @@ const services = [
     features: ["Custom dashboards", "Trade flow analysis", "Tariff impact modeling", "Supply chain mapping"],
   },
   {
-    icon: FileText,
-    title: "Custom Reports",
-    desc: "Tailored research reports designed to answer your specific market questions.",
-    features: ["Country profiles", "Sector deep-dives", "Trade partner analysis", "Investment briefs"],
+    icon: Search,
+    title: "Buyer Search & Due Diligence",
+    desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
+    features: ["Buyer identification", "Due diligence", "KYC verification", "Credit assessment"],
   },
 ];
 
