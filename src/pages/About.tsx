@@ -1,12 +1,5 @@
-import { Target, Eye, Users } from "lucide-react";
+import { Target, Eye, User } from "lucide-react";
 import SEO from "@/components/SEO";
-
-const team = [
-  { name: "Sarah Chen", role: "CEO & Founder", bio: "20+ years in international trade policy and market strategy." },
-  { name: "Michael Torres", role: "Head of Analytics", bio: "Former World Bank data scientist specializing in trade flows." },
-  { name: "Aisha Patel", role: "Compliance Director", bio: "Expert in export regulations across 50+ jurisdictions." },
-  { name: "David Kim", role: "Market Strategist", bio: "Helped 200+ companies enter new international markets." },
-];
 
 const About = () => (
   <div>
@@ -48,27 +41,20 @@ const About = () => (
       </div>
     </section>
 
-    {/* Team */}
+    {/* About Founder */}
     <section className="section-gradient">
-      <div className="container py-16">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <Users className="h-8 w-8 text-accent" />
-            <h2 className="text-3xl font-bold">Our Team</h2>
-          </div>
-          <p className="text-muted-foreground">Industry experts dedicated to your global success.</p>
+      <div className="container py-16 max-w-3xl">
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <User className="h-8 w-8 text-accent" />
+          <h2 className="text-3xl font-bold">About the Founder</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((t) => (
-            <div key={t.name} className="bg-card rounded-lg p-6 text-center border border-border shadow-sm">
-              <div className="w-20 h-20 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-primary">
-                {t.name.split(" ").map((n) => n[0]).join("")}
-              </div>
-              <h3 className="font-semibold">{t.name}</h3>
-              <p className="text-sm text-accent font-medium">{t.role}</p>
-              <p className="text-sm text-muted-foreground mt-2">{t.bio}</p>
-            </div>
-          ))}
+        <div className="space-y-4 text-muted-foreground leading-relaxed text-center">
+          <p>
+            <span className="font-semibold text-foreground">Anil Trivedi</span> is the founder of Trade Intelligence, a Mumbai-based export-import advisory practice. With decades of hands-on experience in international trade, market research, buyer due diligence and trade compliance, he has guided exporters and importers across diverse sectors to enter new markets, identify reliable buyers and navigate complex customs and regulatory frameworks.
+          </p>
+          <p>
+            His work blends deep domain expertise with data-driven research, helping clients turn global trade data into clear, actionable strategy. Trade Intelligence was founded with the conviction that every business — large or small — deserves access to the same caliber of insight that drives the world's most successful exporters.
+          </p>
         </div>
       </div>
     </section>
@@ -76,3 +62,4 @@ const About = () => (
 );
 
 export default About;
+
