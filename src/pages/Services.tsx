@@ -8,7 +8,7 @@ const services = [
     icon: Globe,
     title: "Export Consulting",
     desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
-    features: ["Market entry strategy", "Distribution channel analysis", "Pricing & positioning", "Risk assessment"],
+    features: ["Market entry strategy", "Trade Compliance", "Pricing & positioning", "Risk assessment"],
   },
   {
     icon: BarChart3,
