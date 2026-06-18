@@ -29,10 +29,10 @@ const Index = () => (
       keywords="export consulting, import consulting, trade intelligence, trade data analytics, buyer search, KYC, due diligence, customs compliance, trade compliance, market research, export strategy, risk analysis"
     />
     {/* Hero */}
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       <img src={heroImage} alt="Global trade network" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 hero-overlay" />
-      <div className="container relative z-10 py-20">
+      <div className="container relative z-10 py-16">
         <div className="max-w-2xl space-y-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
           <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-widest rounded-full bg-accent/20 text-accent">
             Global Trade Advisory
@@ -53,6 +53,7 @@ const Index = () => (
               </Button>
             </Link>
           </div>
+          <GlobalTradeMap />
         </div>
       </div>
     </section>
