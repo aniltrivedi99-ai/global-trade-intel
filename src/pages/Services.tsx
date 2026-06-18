@@ -78,6 +78,9 @@ const Services = () => (
       ))}
     </section>
 
+    <KYCMatrix />
+
+
     <section className="bg-primary">
       <div className="container py-16 text-center">
         <h2 className="text-3xl font-bold text-primary-foreground mb-4">Need a Custom Solution?</h2>
