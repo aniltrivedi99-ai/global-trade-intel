@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Globe, Search, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight, BarChart3, Globe, Search, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import GlobalTradeMap from "@/components/GlobalTradeMap";
 import heroImage from "@/assets/hero-globe.jpg";
 
 const stats = [
