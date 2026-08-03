@@ -62,7 +62,15 @@ const InsightDetail = () => {
       </section>
 
       <article className="container max-w-3xl py-12 space-y-5">
+        <img
+          src={article.image}
+          alt={article.imageAlt}
+          width={1024}
+          height={640}
+          className="w-full rounded-lg object-cover shadow-sm"
+        />
         <p className="text-lg text-muted-foreground leading-relaxed">{article.excerpt}</p>
+
         {article.content.map((para, i) => (
           <p key={i} className="text-base leading-relaxed text-foreground">
             {para}
