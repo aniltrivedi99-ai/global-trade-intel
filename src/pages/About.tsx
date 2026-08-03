@@ -1,5 +1,7 @@
 import { Target, Eye, User } from "lucide-react";
 import SEO from "@/components/SEO";
+import founderPhoto from "@/assets/anil-trivedi.jpg.asset.json";
+
 
 const About = () => (
   <div>
