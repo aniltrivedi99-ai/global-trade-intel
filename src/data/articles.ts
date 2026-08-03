@@ -1,6 +1,15 @@
+import emergingMarketsImg from "@/assets/insight-emerging-markets.jpg";
+import euRegulationsImg from "@/assets/insight-eu-regulations.jpg";
+import aiTradeDataImg from "@/assets/insight-ai-trade-data.jpg";
+import supplyChainImg from "@/assets/insight-supply-chain.jpg";
+import aseanFtaImg from "@/assets/insight-asean-fta.jpg";
+import complianceChecklistImg from "@/assets/insight-compliance-checklist.jpg";
+
 export type Article = {
   slug: string;
   title: string;
+  image: string;
+  imageAlt: string;
   excerpt: string;
   category: string;
   date: string;
@@ -11,6 +20,8 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "top-10-emerging-export-markets-2026",
+    image: emergingMarketsImg,
+    imageAlt: "Sunlit desk with a world map marked with pins, notebook and coffee",
     title: "Top 10 Emerging Export Markets in 2026",
     excerpt:
       "Discover which markets are poised for significant growth and how to position your business to take advantage.",
@@ -26,6 +37,8 @@ export const articles: Article[] = [
   },
   {
     slug: "understanding-new-eu-trade-regulations",
+    image: euRegulationsImg,
+    imageAlt: "EU regulation documents and a small EU flag on a warm-lit wooden table",
     title: "Understanding New EU Trade Regulations",
     excerpt:
       "A comprehensive breakdown of the latest EU trade policy changes and their impact on exporters worldwide.",
@@ -40,6 +53,8 @@ export const articles: Article[] = [
   },
   {
     slug: "ai-transforming-trade-data-analysis",
+    image: aiTradeDataImg,
+    imageAlt: "Laptop showing glowing trade analytics charts on a cozy evening desk",
     title: "How AI Is Transforming Trade Data Analysis",
     excerpt:
       "Machine learning and AI are revolutionizing how businesses analyze trade flows and predict market movements.",
@@ -54,6 +69,8 @@ export const articles: Article[] = [
   },
   {
     slug: "supply-chain-resilience-lessons",
+    image: supplyChainImg,
+    imageAlt: "Container port at golden sunset with cranes and a cargo ship",
     title: "Supply Chain Resilience: Lessons from 2025",
     excerpt:
       "Key takeaways from last year's supply chain disruptions and strategies for building more resilient networks.",
@@ -68,6 +85,8 @@ export const articles: Article[] = [
   },
   {
     slug: "asean-free-trade-agreements",
+    image: aseanFtaImg,
+    imageAlt: "Southeast Asian trade port town at golden hour with crates of goods",
     title: "ASEAN Free Trade Agreements: Opportunities for Exporters",
     excerpt:
       "How to leverage ASEAN's expanding trade agreements for competitive advantage in Southeast Asian markets.",
@@ -82,6 +101,8 @@ export const articles: Article[] = [
   },
   {
     slug: "export-compliance-checklist",
+    image: complianceChecklistImg,
+    imageAlt: "Export compliance checklist with pen and coffee under warm lamp light",
     title: "Export Compliance Checklist for New Exporters",
     excerpt:
       "Essential steps every new exporter should follow to ensure compliance with international trade regulations.",
