@@ -3,32 +3,46 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
+import exportConsultingImg from "@/assets/service-export-consulting.jpg";
+import marketIntelligenceImg from "@/assets/service-market-intelligence.jpg";
+import tradeAnalyticsImg from "@/assets/service-trade-analytics.jpg";
+import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
+
 
 const services = [
   {
     icon: Globe,
+    image: exportConsultingImg,
+    imageAlt: "Container ship and port cranes representing export consulting services",
     title: "Export Consulting",
     desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
     features: ["Market entry strategy", "Trade Compliance", "Pricing & positioning", "Risk assessment"],
   },
   {
     icon: BarChart3,
+    image: marketIntelligenceImg,
+    imageAlt: "Analysts reviewing global market research charts and world map",
     title: "Market Intelligence",
     desc: "Make informed decisions with comprehensive market research and competitive analysis.",
     features: ["Demand forecasting", "Competitor mapping", "Consumer insights", "Opportunity scoring", "Country Profiles", "Sector Deep Dives"],
   },
   {
     icon: TrendingUp,
+    image: tradeAnalyticsImg,
+    imageAlt: "Trade data analytics dashboard with charts on monitors",
     title: "Trade Data Analytics",
     desc: "Leverage real-time trade data and advanced analytics to identify trends and opportunities.",
     features: ["Custom dashboards", "Trade flow analysis", "Tariff impact modeling", "Supply chain mapping"],
   },
   {
     icon: Search,
+    image: buyerDueDiligenceImg,
+    imageAlt: "Business handshake over a verification checklist for buyer due diligence",
     title: "Buyer Search & Due Diligence",
     desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
     features: ["Buyer identification", "Due diligence", "KYC verification", "Credit assessment"],
   },
+
 ];
 
 const Services = () => (
@@ -71,9 +85,17 @@ const Services = () => (
               ))}
             </ul>
           </div>
-          <div className="flex-1 w-full h-48 rounded-lg bg-secondary flex items-center justify-center">
-            <s.icon className="h-16 w-16 text-muted-foreground/30" />
+          <div className="flex-1 w-full overflow-hidden rounded-lg bg-secondary">
+            <img
+              src={s.image}
+              alt={s.imageAlt}
+              width={1024}
+              height={640}
+              loading="lazy"
+              className="h-56 w-full object-cover md:h-64"
+            />
           </div>
+
         </div>
       ))}
     </section>
