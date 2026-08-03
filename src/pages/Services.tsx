@@ -85,9 +85,17 @@ const Services = () => (
               ))}
             </ul>
           </div>
-          <div className="flex-1 w-full h-48 rounded-lg bg-secondary flex items-center justify-center">
-            <s.icon className="h-16 w-16 text-muted-foreground/30" />
+          <div className="flex-1 w-full overflow-hidden rounded-lg bg-secondary">
+            <img
+              src={s.image}
+              alt={s.imageAlt}
+              width={1024}
+              height={640}
+              loading="lazy"
+              className="h-56 w-full object-cover md:h-64"
+            />
           </div>
+
         </div>
       ))}
     </section>
