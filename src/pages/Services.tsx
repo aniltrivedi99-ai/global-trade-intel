@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
+import exportConsultingImg from "@/assets/service-export-consulting.jpg";
+import marketIntelligenceImg from "@/assets/service-market-intelligence.jpg";
+import tradeAnalyticsImg from "@/assets/service-trade-analytics.jpg";
+import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
+
 
 const services = [
   {
