@@ -36,9 +36,17 @@ const Insights = () => (
             key={a.slug}
             className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow group"
           >
-            <div className="h-40 bg-secondary flex items-center justify-center">
-              <span className="text-4xl text-muted-foreground/20 font-bold">TI</span>
+            <div className="h-44 overflow-hidden bg-secondary">
+              <img
+                src={a.image}
+                alt={a.imageAlt}
+                width={1024}
+                height={640}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
+
             <div className="p-6 space-y-3">
               <div className="flex items-center gap-2">
                 <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${categoryColors[a.category] || "bg-secondary text-foreground"}`}>
