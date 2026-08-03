@@ -12,28 +12,37 @@ import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
 const services = [
   {
     icon: Globe,
+    image: exportConsultingImg,
+    imageAlt: "Container ship and port cranes representing export consulting services",
     title: "Export Consulting",
     desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
     features: ["Market entry strategy", "Trade Compliance", "Pricing & positioning", "Risk assessment"],
   },
   {
     icon: BarChart3,
+    image: marketIntelligenceImg,
+    imageAlt: "Analysts reviewing global market research charts and world map",
     title: "Market Intelligence",
     desc: "Make informed decisions with comprehensive market research and competitive analysis.",
     features: ["Demand forecasting", "Competitor mapping", "Consumer insights", "Opportunity scoring", "Country Profiles", "Sector Deep Dives"],
   },
   {
     icon: TrendingUp,
+    image: tradeAnalyticsImg,
+    imageAlt: "Trade data analytics dashboard with charts on monitors",
     title: "Trade Data Analytics",
     desc: "Leverage real-time trade data and advanced analytics to identify trends and opportunities.",
     features: ["Custom dashboards", "Trade flow analysis", "Tariff impact modeling", "Supply chain mapping"],
   },
   {
     icon: Search,
+    image: buyerDueDiligenceImg,
+    imageAlt: "Business handshake over a verification checklist for buyer due diligence",
     title: "Buyer Search & Due Diligence",
     desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
     features: ["Buyer identification", "Due diligence", "KYC verification", "Credit assessment"],
   },
+
 ];
 
 const Services = () => (
