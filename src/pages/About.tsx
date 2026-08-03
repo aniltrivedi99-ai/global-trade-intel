@@ -43,19 +43,36 @@ const About = () => (
 
     {/* About Founder */}
     <section className="section-gradient">
-      <div className="container py-16 max-w-3xl">
-        <div className="flex items-center justify-center gap-3 mb-6">
+      <div className="container py-16 max-w-4xl">
+        <div className="flex items-center justify-center gap-3 mb-10">
           <User className="h-8 w-8 text-accent" />
           <h2 className="text-3xl font-bold">About the Founder</h2>
         </div>
-        <div className="space-y-4 text-muted-foreground leading-relaxed text-center">
-          <p>
-            <span className="font-semibold text-foreground">Anil Trivedi</span> is the founder of Trade Intelligence, a Mumbai-based export-import advisory practice. With decades of hands-on experience in international trade, market research, buyer due diligence and trade compliance, he has guided exporters and importers across diverse sectors to enter new markets, identify reliable buyers and navigate complex customs and regulatory frameworks.
-          </p>
-          <p>
-            His work blends deep domain expertise with data-driven research, helping clients turn global trade data into clear, actionable strategy. Trade Intelligence was founded with the conviction that every business — large or small — deserves access to the same caliber of insight that drives the world's most successful exporters.
-          </p>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="w-56 flex-shrink-0">
+            <img
+              src={founderPhoto.url}
+              alt="Anil Trivedi, founder of Trade Intelligence"
+              width={783}
+              height={1376}
+              loading="lazy"
+              className="w-56 h-64 object-cover object-top rounded-lg border border-border shadow-sm"
+            />
+            <p className="mt-3 text-center">
+              <span className="block font-semibold text-foreground">Anil Trivedi</span>
+              <span className="block text-sm text-muted-foreground">Founder</span>
+            </p>
+          </div>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              <span className="font-semibold text-foreground">Anil Trivedi</span> is the founder of Trade Intelligence, a Mumbai-based export-import advisory practice. With decades of hands-on experience in international trade, market research, buyer due diligence and trade compliance, he has guided exporters and importers across diverse sectors to enter new markets, identify reliable buyers and navigate complex customs and regulatory frameworks.
+            </p>
+            <p>
+              His work blends deep domain expertise with data-driven research, helping clients turn global trade data into clear, actionable strategy. Trade Intelligence was founded with the conviction that every business — large or small — deserves access to the same caliber of insight that drives the world's most successful exporters.
+            </p>
+          </div>
         </div>
+
       </div>
     </section>
   </div>
