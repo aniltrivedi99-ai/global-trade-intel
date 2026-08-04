@@ -1,21 +1,21 @@
 import emergingMarketsImg from "@/assets/insight-emerging-markets.jpg";
-import emergingMarketsAvif from "@/assets/insight-emerging-markets.jpg?format=avif";
-import emergingMarketsWebp from "@/assets/insight-emerging-markets.jpg?format=webp";
+import emergingMarketsAvif from "@/assets/insight-emerging-markets.jpg?format=avif&w=720&quality=55";
+import emergingMarketsWebp from "@/assets/insight-emerging-markets.jpg?format=webp&w=720&quality=68";
 import euRegulationsImg from "@/assets/insight-eu-regulations.jpg";
-import euRegulationsAvif from "@/assets/insight-eu-regulations.jpg?format=avif";
-import euRegulationsWebp from "@/assets/insight-eu-regulations.jpg?format=webp";
+import euRegulationsAvif from "@/assets/insight-eu-regulations.jpg?format=avif&w=720&quality=55";
+import euRegulationsWebp from "@/assets/insight-eu-regulations.jpg?format=webp&w=720&quality=68";
 import aiTradeDataImg from "@/assets/insight-ai-trade-data.jpg";
-import aiTradeDataAvif from "@/assets/insight-ai-trade-data.jpg?format=avif";
-import aiTradeDataWebp from "@/assets/insight-ai-trade-data.jpg?format=webp";
+import aiTradeDataAvif from "@/assets/insight-ai-trade-data.jpg?format=avif&w=720&quality=55";
+import aiTradeDataWebp from "@/assets/insight-ai-trade-data.jpg?format=webp&w=720&quality=68";
 import supplyChainImg from "@/assets/insight-supply-chain.jpg";
-import supplyChainAvif from "@/assets/insight-supply-chain.jpg?format=avif";
-import supplyChainWebp from "@/assets/insight-supply-chain.jpg?format=webp";
+import supplyChainAvif from "@/assets/insight-supply-chain.jpg?format=avif&w=720&quality=55";
+import supplyChainWebp from "@/assets/insight-supply-chain.jpg?format=webp&w=720&quality=68";
 import aseanFtaImg from "@/assets/insight-asean-fta.jpg";
-import aseanFtaAvif from "@/assets/insight-asean-fta.jpg?format=avif";
-import aseanFtaWebp from "@/assets/insight-asean-fta.jpg?format=webp";
+import aseanFtaAvif from "@/assets/insight-asean-fta.jpg?format=avif&w=720&quality=55";
+import aseanFtaWebp from "@/assets/insight-asean-fta.jpg?format=webp&w=720&quality=68";
 import complianceChecklistImg from "@/assets/insight-compliance-checklist.jpg";
-import complianceChecklistAvif from "@/assets/insight-compliance-checklist.jpg?format=avif";
-import complianceChecklistWebp from "@/assets/insight-compliance-checklist.jpg?format=webp";
+import complianceChecklistAvif from "@/assets/insight-compliance-checklist.jpg?format=avif&w=720&quality=55";
+import complianceChecklistWebp from "@/assets/insight-compliance-checklist.jpg?format=webp&w=720&quality=68";
 
 export type Article = {
   slug: string;

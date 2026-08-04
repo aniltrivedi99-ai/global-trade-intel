@@ -5,8 +5,8 @@ import SEO from "@/components/SEO";
 import GlobalTradeMap from "@/components/GlobalTradeMap";
 import Picture from "@/components/Picture";
 import heroImage from "@/assets/hero-globe.jpg";
-import heroAvif from "@/assets/hero-globe.jpg?format=avif";
-import heroWebp from "@/assets/hero-globe.jpg?format=webp";
+import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
+import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
 const stats = [
   { value: "120+", label: "Countries Covered" },
