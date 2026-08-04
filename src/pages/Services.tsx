@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
+import Picture from "@/components/Picture";
 import exportConsultingImg from "@/assets/service-export-consulting.jpg";
+import exportConsultingAvif from "@/assets/service-export-consulting.jpg?format=avif";
+import exportConsultingWebp from "@/assets/service-export-consulting.jpg?format=webp";
 import marketIntelligenceImg from "@/assets/service-market-intelligence.jpg";
+import marketIntelligenceAvif from "@/assets/service-market-intelligence.jpg?format=avif";
+import marketIntelligenceWebp from "@/assets/service-market-intelligence.jpg?format=webp";
 import tradeAnalyticsImg from "@/assets/service-trade-analytics.jpg";
+import tradeAnalyticsAvif from "@/assets/service-trade-analytics.jpg?format=avif";
+import tradeAnalyticsWebp from "@/assets/service-trade-analytics.jpg?format=webp";
 import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
+import buyerDueDiligenceAvif from "@/assets/service-buyer-due-diligence.jpg?format=avif";
+import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?format=webp";
 
 
 const services = [
