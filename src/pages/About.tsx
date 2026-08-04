@@ -58,7 +58,7 @@ const About = () => (
               width={783}
               height={1376}
               loading="lazy"
-              className="w-56 h-64 object-cover object-top rounded-lg border border-border shadow-sm"
+              className="w-56 h-auto object-contain rounded-lg border border-border shadow-sm bg-muted"
             />
             <p className="mt-3 text-center">
               <span className="block font-semibold text-foreground">Anil Trivedi</span>
