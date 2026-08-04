@@ -3,6 +3,7 @@ import { ArrowLeft, Clock } from "lucide-react";
 import { articles } from "@/data/articles";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import Picture from "@/components/Picture";
 
 const InsightDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -62,11 +63,14 @@ const InsightDetail = () => {
       </section>
 
       <article className="container max-w-3xl py-12 space-y-5">
-        <img
+        <Picture
+          avif={article.imageAvif}
+          webp={article.imageWebp}
           src={article.image}
           alt={article.imageAlt}
           width={1024}
           height={640}
+          fetchpriority="high"
           className="w-full rounded-lg object-cover shadow-sm"
         />
         <p className="text-lg text-muted-foreground leading-relaxed">{article.excerpt}</p>
