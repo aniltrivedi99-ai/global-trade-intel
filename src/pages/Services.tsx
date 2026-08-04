@@ -5,17 +5,17 @@ import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
 import Picture from "@/components/Picture";
 import exportConsultingImg from "@/assets/service-export-consulting.jpg";
-import exportConsultingAvif from "@/assets/service-export-consulting.jpg?format=avif";
-import exportConsultingWebp from "@/assets/service-export-consulting.jpg?format=webp";
+import exportConsultingAvif from "@/assets/service-export-consulting.jpg?format=avif&w=720&quality=55";
+import exportConsultingWebp from "@/assets/service-export-consulting.jpg?format=webp&w=720&quality=68";
 import marketIntelligenceImg from "@/assets/service-market-intelligence.jpg";
-import marketIntelligenceAvif from "@/assets/service-market-intelligence.jpg?format=avif";
-import marketIntelligenceWebp from "@/assets/service-market-intelligence.jpg?format=webp";
+import marketIntelligenceAvif from "@/assets/service-market-intelligence.jpg?format=avif&w=720&quality=55";
+import marketIntelligenceWebp from "@/assets/service-market-intelligence.jpg?format=webp&w=720&quality=68";
 import tradeAnalyticsImg from "@/assets/service-trade-analytics.jpg";
-import tradeAnalyticsAvif from "@/assets/service-trade-analytics.jpg?format=avif";
-import tradeAnalyticsWebp from "@/assets/service-trade-analytics.jpg?format=webp";
+import tradeAnalyticsAvif from "@/assets/service-trade-analytics.jpg?format=avif&w=720&quality=55";
+import tradeAnalyticsWebp from "@/assets/service-trade-analytics.jpg?format=webp&w=720&quality=68";
 import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
-import buyerDueDiligenceAvif from "@/assets/service-buyer-due-diligence.jpg?format=avif";
-import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?format=webp";
+import buyerDueDiligenceAvif from "@/assets/service-buyer-due-diligence.jpg?format=avif&w=720&quality=55";
+import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?format=webp&w=720&quality=68";
 
 
 const services = [
