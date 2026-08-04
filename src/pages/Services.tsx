@@ -22,6 +22,8 @@ const services = [
   {
     icon: Globe,
     image: exportConsultingImg,
+    imageAvif: exportConsultingAvif,
+    imageWebp: exportConsultingWebp,
     imageAlt: "Container ship and port cranes representing export consulting services",
     title: "Export Consulting",
     desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
@@ -30,6 +32,8 @@ const services = [
   {
     icon: BarChart3,
     image: marketIntelligenceImg,
+    imageAvif: marketIntelligenceAvif,
+    imageWebp: marketIntelligenceWebp,
     imageAlt: "Analysts reviewing global market research charts and world map",
     title: "Market Intelligence",
     desc: "Make informed decisions with comprehensive market research and competitive analysis.",
@@ -38,6 +42,8 @@ const services = [
   {
     icon: TrendingUp,
     image: tradeAnalyticsImg,
+    imageAvif: tradeAnalyticsAvif,
+    imageWebp: tradeAnalyticsWebp,
     imageAlt: "Trade data analytics dashboard with charts on monitors",
     title: "Trade Data Analytics",
     desc: "Leverage real-time trade data and advanced analytics to identify trends and opportunities.",
@@ -46,6 +52,8 @@ const services = [
   {
     icon: Search,
     image: buyerDueDiligenceImg,
+    imageAvif: buyerDueDiligenceAvif,
+    imageWebp: buyerDueDiligenceWebp,
     imageAlt: "Business handshake over a verification checklist for buyer due diligence",
     title: "Buyer Search & Due Diligence",
     desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
