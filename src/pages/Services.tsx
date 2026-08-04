@@ -103,7 +103,9 @@ const Services = () => (
             </ul>
           </div>
           <div className="flex-1 w-full overflow-hidden rounded-lg bg-secondary">
-            <img
+            <Picture
+              avif={s.imageAvif}
+              webp={s.imageWebp}
               src={s.image}
               alt={s.imageAlt}
               width={1024}
