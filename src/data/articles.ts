@@ -1,14 +1,28 @@
 import emergingMarketsImg from "@/assets/insight-emerging-markets.jpg";
+import emergingMarketsAvif from "@/assets/insight-emerging-markets.jpg?format=avif";
+import emergingMarketsWebp from "@/assets/insight-emerging-markets.jpg?format=webp";
 import euRegulationsImg from "@/assets/insight-eu-regulations.jpg";
+import euRegulationsAvif from "@/assets/insight-eu-regulations.jpg?format=avif";
+import euRegulationsWebp from "@/assets/insight-eu-regulations.jpg?format=webp";
 import aiTradeDataImg from "@/assets/insight-ai-trade-data.jpg";
+import aiTradeDataAvif from "@/assets/insight-ai-trade-data.jpg?format=avif";
+import aiTradeDataWebp from "@/assets/insight-ai-trade-data.jpg?format=webp";
 import supplyChainImg from "@/assets/insight-supply-chain.jpg";
+import supplyChainAvif from "@/assets/insight-supply-chain.jpg?format=avif";
+import supplyChainWebp from "@/assets/insight-supply-chain.jpg?format=webp";
 import aseanFtaImg from "@/assets/insight-asean-fta.jpg";
+import aseanFtaAvif from "@/assets/insight-asean-fta.jpg?format=avif";
+import aseanFtaWebp from "@/assets/insight-asean-fta.jpg?format=webp";
 import complianceChecklistImg from "@/assets/insight-compliance-checklist.jpg";
+import complianceChecklistAvif from "@/assets/insight-compliance-checklist.jpg?format=avif";
+import complianceChecklistWebp from "@/assets/insight-compliance-checklist.jpg?format=webp";
 
 export type Article = {
   slug: string;
   title: string;
   image: string;
+  imageAvif: string;
+  imageWebp: string;
   imageAlt: string;
   excerpt: string;
   category: string;
@@ -21,6 +35,8 @@ export const articles: Article[] = [
   {
     slug: "top-10-emerging-export-markets-2026",
     image: emergingMarketsImg,
+    imageAvif: emergingMarketsAvif,
+    imageWebp: emergingMarketsWebp,
     imageAlt: "Sunlit desk with a world map marked with pins, notebook and coffee",
     title: "Top 10 Emerging Export Markets in 2026",
     excerpt:
@@ -38,6 +54,8 @@ export const articles: Article[] = [
   {
     slug: "understanding-new-eu-trade-regulations",
     image: euRegulationsImg,
+    imageAvif: euRegulationsAvif,
+    imageWebp: euRegulationsWebp,
     imageAlt: "EU regulation documents and a small EU flag on a warm-lit wooden table",
     title: "Understanding New EU Trade Regulations",
     excerpt:
@@ -54,6 +72,8 @@ export const articles: Article[] = [
   {
     slug: "ai-transforming-trade-data-analysis",
     image: aiTradeDataImg,
+    imageAvif: aiTradeDataAvif,
+    imageWebp: aiTradeDataWebp,
     imageAlt: "Laptop showing glowing trade analytics charts on a cozy evening desk",
     title: "How AI Is Transforming Trade Data Analysis",
     excerpt:
@@ -70,6 +90,8 @@ export const articles: Article[] = [
   {
     slug: "supply-chain-resilience-lessons",
     image: supplyChainImg,
+    imageAvif: supplyChainAvif,
+    imageWebp: supplyChainWebp,
     imageAlt: "Container port at golden sunset with cranes and a cargo ship",
     title: "Supply Chain Resilience: Lessons from 2025",
     excerpt:
@@ -86,6 +108,8 @@ export const articles: Article[] = [
   {
     slug: "asean-free-trade-agreements",
     image: aseanFtaImg,
+    imageAvif: aseanFtaAvif,
+    imageWebp: aseanFtaWebp,
     imageAlt: "Southeast Asian trade port town at golden hour with crates of goods",
     title: "ASEAN Free Trade Agreements: Opportunities for Exporters",
     excerpt:
@@ -102,6 +126,8 @@ export const articles: Article[] = [
   {
     slug: "export-compliance-checklist",
     image: complianceChecklistImg,
+    imageAvif: complianceChecklistAvif,
+    imageWebp: complianceChecklistWebp,
     imageAlt: "Export compliance checklist with pen and coffee under warm lamp light",
     title: "Export Compliance Checklist for New Exporters",
     excerpt:
