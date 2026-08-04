@@ -3,7 +3,10 @@ import { ArrowRight, BarChart3, Globe, Search, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import GlobalTradeMap from "@/components/GlobalTradeMap";
+import Picture from "@/components/Picture";
 import heroImage from "@/assets/hero-globe.jpg";
+import heroAvif from "@/assets/hero-globe.jpg?format=avif";
+import heroWebp from "@/assets/hero-globe.jpg?format=webp";
 
 const stats = [
   { value: "120+", label: "Countries Covered" },
@@ -30,7 +33,17 @@ const Index = () => (
     />
     {/* Hero */}
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <img src={heroImage} alt="Global trade network" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+      <Picture
+        avif={heroAvif}
+        webp={heroWebp}
+        src={heroImage}
+        alt="Global trade network"
+        width={1920}
+        height={1080}
+        loading="eager"
+        fetchpriority="high"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       <div className="absolute inset-0 hero-overlay" />
       <div className="container relative z-10 py-16">
         <div className="max-w-2xl space-y-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>

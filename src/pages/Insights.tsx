@@ -2,6 +2,7 @@ import { Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 import SEO from "@/components/SEO";
+import Picture from "@/components/Picture";
 
 const categoryColors: Record<string, string> = {
   "Market Trends": "bg-accent/10 text-accent",
@@ -37,7 +38,9 @@ const Insights = () => (
             className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow group"
           >
             <div className="h-44 overflow-hidden bg-secondary">
-              <img
+              <Picture
+                avif={a.imageAvif}
+                webp={a.imageWebp}
                 src={a.image}
                 alt={a.imageAlt}
                 width={1024}

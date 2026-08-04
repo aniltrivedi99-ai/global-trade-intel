@@ -3,16 +3,27 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
+import Picture from "@/components/Picture";
 import exportConsultingImg from "@/assets/service-export-consulting.jpg";
+import exportConsultingAvif from "@/assets/service-export-consulting.jpg?format=avif";
+import exportConsultingWebp from "@/assets/service-export-consulting.jpg?format=webp";
 import marketIntelligenceImg from "@/assets/service-market-intelligence.jpg";
+import marketIntelligenceAvif from "@/assets/service-market-intelligence.jpg?format=avif";
+import marketIntelligenceWebp from "@/assets/service-market-intelligence.jpg?format=webp";
 import tradeAnalyticsImg from "@/assets/service-trade-analytics.jpg";
+import tradeAnalyticsAvif from "@/assets/service-trade-analytics.jpg?format=avif";
+import tradeAnalyticsWebp from "@/assets/service-trade-analytics.jpg?format=webp";
 import buyerDueDiligenceImg from "@/assets/service-buyer-due-diligence.jpg";
+import buyerDueDiligenceAvif from "@/assets/service-buyer-due-diligence.jpg?format=avif";
+import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?format=webp";
 
 
 const services = [
   {
     icon: Globe,
     image: exportConsultingImg,
+    imageAvif: exportConsultingAvif,
+    imageWebp: exportConsultingWebp,
     imageAlt: "Container ship and port cranes representing export consulting services",
     title: "Export Consulting",
     desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
@@ -21,6 +32,8 @@ const services = [
   {
     icon: BarChart3,
     image: marketIntelligenceImg,
+    imageAvif: marketIntelligenceAvif,
+    imageWebp: marketIntelligenceWebp,
     imageAlt: "Analysts reviewing global market research charts and world map",
     title: "Market Intelligence",
     desc: "Make informed decisions with comprehensive market research and competitive analysis.",
@@ -29,6 +42,8 @@ const services = [
   {
     icon: TrendingUp,
     image: tradeAnalyticsImg,
+    imageAvif: tradeAnalyticsAvif,
+    imageWebp: tradeAnalyticsWebp,
     imageAlt: "Trade data analytics dashboard with charts on monitors",
     title: "Trade Data Analytics",
     desc: "Leverage real-time trade data and advanced analytics to identify trends and opportunities.",
@@ -37,6 +52,8 @@ const services = [
   {
     icon: Search,
     image: buyerDueDiligenceImg,
+    imageAvif: buyerDueDiligenceAvif,
+    imageWebp: buyerDueDiligenceWebp,
     imageAlt: "Business handshake over a verification checklist for buyer due diligence",
     title: "Buyer Search & Due Diligence",
     desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
@@ -86,7 +103,9 @@ const Services = () => (
             </ul>
           </div>
           <div className="flex-1 w-full overflow-hidden rounded-lg bg-secondary">
-            <img
+            <Picture
+              avif={s.imageAvif}
+              webp={s.imageWebp}
               src={s.image}
               alt={s.imageAlt}
               width={1024}
