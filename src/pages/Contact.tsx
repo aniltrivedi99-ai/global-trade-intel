@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Mail, Phone, MapPin, Send, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,10 +8,23 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
 
+const OWNER_EMAIL = "aniltrivedi.impex@outlook.com";
+
 const Contact = () => {
   const { toast } = useToast();
+  const location = useLocation();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (location.hash === "#inquiry-form") {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      const first = formRef.current?.querySelector("input");
+      (first as HTMLInputElement | null)?.focus({ preventScroll: true });
+    }
+  }, [location.hash, location.key]);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,15 +92,24 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Schedule a 30-minute discovery call with our trade experts.
               </p>
-              <Button variant="outline" size="sm" className="w-full">
-                View Calendar
+              <Button variant="outline" size="sm" className="w-full" asChild>
+                <a
+                  href={`mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(
+                    "Request: 30-minute consultation call",
+                  )}&body=${encodeURIComponent(
+                    "Hello Anil,\n\nI would like to book a 30-minute discovery call.\n\nPreferred date/time:\nCompany:\nTopic:\n\nThank you.",
+                  )}`}
+                >
+                  <CalendarDays className="mr-2 h-4 w-4" /> View Calendar
+                </a>
               </Button>
             </div>
           </div>
 
           {/* Form */}
           <div className="md:col-span-2">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form ref={formRef} id="inquiry-form" onSubmit={handleSubmit} className="space-y-5">
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Full Name</label>
