@@ -37,7 +37,7 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" className="ml-2">
+          <Link to="/contact#inquiry-form" className="ml-2">
             <Button size="sm">Get Consultation</Button>
           </Link>
         </nav>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)}>
+            <Link to="/contact#inquiry-form" onClick={() => setOpen(false)}>
               <Button size="sm" className="w-full mt-2">Get Consultation</Button>
             </Link>
           </div>
