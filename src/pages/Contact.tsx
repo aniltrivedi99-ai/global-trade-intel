@@ -92,15 +92,24 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Schedule a 30-minute discovery call with our trade experts.
               </p>
-              <Button variant="outline" size="sm" className="w-full">
-                View Calendar
+              <Button variant="outline" size="sm" className="w-full" asChild>
+                <a
+                  href={`mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(
+                    "Request: 30-minute consultation call",
+                  )}&body=${encodeURIComponent(
+                    "Hello Anil,\n\nI would like to book a 30-minute discovery call.\n\nPreferred date/time:\nCompany:\nTopic:\n\nThank you.",
+                  )}`}
+                >
+                  <CalendarDays className="mr-2 h-4 w-4" /> View Calendar
+                </a>
               </Button>
             </div>
           </div>
 
           {/* Form */}
           <div className="md:col-span-2">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form ref={formRef} id="inquiry-form" onSubmit={handleSubmit} className="space-y-5">
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Full Name</label>
