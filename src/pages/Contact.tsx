@@ -75,7 +75,7 @@ const Contact = () => {
                 {[
                   { icon: Mail, label: "Email", value: "aniltrivedi.impex@outlook.com" },
                   { icon: Phone, label: "Phone", value: "+91 9870446898" },
-                  { icon: MapPin, label: "Office", value: "B-602, Solitaire Paradise, M.G. Cross Road No.1, Kandivali (West), Mumbai 400067, Maharashtra, India." },
+                  { icon: MapPin, label: "Office", value: "B-602, Solitaire, M.G. Cross Road No.1, Kandivali (West), Mumbai 400067, Maharashtra, India." },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-3">
                     <c.icon className="h-5 w-5 text-accent mt-0.5" />
