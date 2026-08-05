@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Mail, Phone, MapPin, Send, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,10 +8,23 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
 
+const OWNER_EMAIL = "aniltrivedi.impex@outlook.com";
+
 const Contact = () => {
   const { toast } = useToast();
+  const location = useLocation();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (location.hash === "#inquiry-form") {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      const first = formRef.current?.querySelector("input");
+      (first as HTMLInputElement | null)?.focus({ preventScroll: true });
+    }
+  }, [location.hash, location.key]);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
