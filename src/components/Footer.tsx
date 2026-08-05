@@ -38,7 +38,7 @@ const Footer = () => (
         <ul className="space-y-2 text-sm text-primary-foreground/70">
           <li>aniltrivedi.impex@outlook.com</li>
           <li>+91 9870446898</li>
-          <li>B-602, Solitaire Paradise, M.G. Cross Road No.1, Kandivali (West), Mumbai 400067, Maharashtra, India.</li>
+          <li>B-602, Solitaire, M.G. Cross Road No.1, Kandivali (West), Mumbai 400067, Maharashtra, India.</li>
         </ul>
       </div>
     </div>
