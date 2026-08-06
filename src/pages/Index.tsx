@@ -68,11 +68,11 @@ const Index = () => (
 
     {/* Stats */}
     <section className="bg-card border-b border-border">
-      <div className="container py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="container py-12 text-center">
         {stats.map((s) => (
           <div key={s.label}>
-            <div className="text-3xl md:text-4xl font-bold text-primary">{s.value}</div>
-            <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
+            <div className="text-4xl md:text-5xl font-bold text-primary">{s.value}</div>
+            <div className="text-base text-muted-foreground mt-2">{s.label}</div>
           </div>
         ))}
       </div>
