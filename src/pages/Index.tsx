@@ -8,12 +8,7 @@ import heroImage from "@/assets/hero-globe.jpg";
 import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
 import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
-const stats = [
-  { value: "120+", label: "Countries Covered" },
-  { value: "5,000+", label: "Reports Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years Experience" },
-];
+const stats = [{ value: "23+", label: "Years Experience" }];
 
 const services = [
   { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
