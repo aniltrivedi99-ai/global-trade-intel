@@ -1,9 +1,12 @@
-import { Globe, BarChart3, TrendingUp, Search, ArrowRight } from "lucide-react";
+import { Globe, BarChart3, TrendingUp, Search, FileCheck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import KYCMatrix from "@/components/KYCMatrix";
 import Picture from "@/components/Picture";
+import docComplianceImg from "@/assets/service-documentation-compliance.jpg";
+import docComplianceAvif from "@/assets/service-documentation-compliance.jpg?format=avif&w=720&quality=55";
+import docComplianceWebp from "@/assets/service-documentation-compliance.jpg?format=webp&w=720&quality=68";
 import exportConsultingImg from "@/assets/service-export-consulting.jpg";
 import exportConsultingAvif from "@/assets/service-export-consulting.jpg?format=avif&w=720&quality=55";
 import exportConsultingWebp from "@/assets/service-export-consulting.jpg?format=webp&w=720&quality=68";
@@ -20,14 +23,14 @@ import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?form
 
 const services = [
   {
-    icon: Globe,
-    image: exportConsultingImg,
-    imageAvif: exportConsultingAvif,
-    imageWebp: exportConsultingWebp,
-    imageAlt: "Container ship and port cranes representing export consulting services",
-    title: "Export Consulting",
-    desc: "Navigate the complexities of international trade with strategic guidance tailored to your business goals.",
-    features: ["Market entry strategy", "Trade Compliance", "Pricing & positioning", "Risk assessment"],
+    icon: FileCheck,
+    image: docComplianceImg,
+    imageAvif: docComplianceAvif,
+    imageWebp: docComplianceWebp,
+    imageAlt: "Export documentation and letter of credit paperwork on a desk",
+    title: "Documentation & Trade Compliance",
+    desc: "Export-import documentation, LC verification, customs and regulatory compliance handled end to end.",
+    features: ["Export-import documentation", "LC verification & scrutiny", "HS code classification", "Customs & regulatory compliance"],
   },
   {
     icon: BarChart3,
@@ -35,9 +38,19 @@ const services = [
     imageAvif: marketIntelligenceAvif,
     imageWebp: marketIntelligenceWebp,
     imageAlt: "Analysts reviewing global market research charts and world map",
-    title: "Market Intelligence",
-    desc: "Make informed decisions with comprehensive market research and competitive analysis.",
-    features: ["Demand forecasting", "Competitor mapping", "Consumer insights", "Opportunity scoring", "Country Profiles", "Sector Deep Dives"],
+    title: "Market Intelligence & Data Analysis",
+    desc: "Market research, competitive analysis, HS code, duty and tariff insights for informed decisions.",
+    features: ["Market research", "Competitor mapping", "Duty & tariff insights", "Country profiles", "Sector deep dives", "Opportunity scoring"],
+  },
+  {
+    icon: Search,
+    image: buyerDueDiligenceImg,
+    imageAvif: buyerDueDiligenceAvif,
+    imageWebp: buyerDueDiligenceWebp,
+    imageAlt: "Business handshake over a verification checklist for buyer due diligence",
+    title: "New Buyer Search & Due Diligence",
+    desc: "Buyer identification across target markets, backed by KYC and credit verification before you commit.",
+    features: ["Buyer identification", "Lead generation", "KYC verification", "Credit assessment"],
   },
   {
     icon: TrendingUp,
@@ -46,21 +59,22 @@ const services = [
     imageWebp: tradeAnalyticsWebp,
     imageAlt: "Trade data analytics dashboard with charts on monitors",
     title: "Trade Data Analytics",
-    desc: "Leverage real-time trade data and advanced analytics to identify trends and opportunities.",
-    features: ["Custom dashboards", "Trade flow analysis", "Tariff impact modeling", "Supply chain mapping"],
+    desc: "Insights from trade data and economic indicators to track flows, pricing and demand shifts.",
+    features: ["Trade flow analysis", "Tariff impact review", "Supply chain mapping", "Custom reports"],
   },
   {
-    icon: Search,
-    image: buyerDueDiligenceImg,
-    imageAvif: buyerDueDiligenceAvif,
-    imageWebp: buyerDueDiligenceWebp,
-    imageAlt: "Business handshake over a verification checklist for buyer due diligence",
-    title: "Buyer Search & Due Diligence",
-    desc: "Identify and verify reliable international buyers with comprehensive background checks and KYC verification.",
-    features: ["Buyer identification", "Due diligence", "KYC verification", "Credit assessment"],
+    icon: Globe,
+    image: exportConsultingImg,
+    imageAvif: exportConsultingAvif,
+    imageWebp: exportConsultingWebp,
+    imageAlt: "Container ship and port cranes representing export consulting services",
+    title: "Export Consulting",
+    desc: "Practical guidance to enter and expand in international markets, drawn from 23+ years in chemicals, polymers and petrochemicals.",
+    features: ["Market entry strategy", "Pricing & positioning", "Risk assessment", "Export strategy"],
   },
 
 ];
+
 
 const Services = () => (
   <div>
