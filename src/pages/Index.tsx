@@ -8,12 +8,13 @@ import heroImage from "@/assets/hero-globe.jpg";
 import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
 import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
-const stats = [
-  { value: "120+", label: "Countries Covered" },
-  { value: "5,000+", label: "Reports Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years Experience" },
+const specialities = [
+  { title: "Documentation & Trade Compliance", desc: "Export-import documentation, LC verification, customs & regulatory compliance." },
+  { title: "Market Intelligence & Data Analysis", desc: "Market research, competitive analysis, HS code, duty & tariff insights." },
+  { title: "New Buyer Search", desc: "Buyer identification and lead generation across target markets." },
+  { title: "Due Diligence", desc: "Business analysis, KYC and credit checks before you commit." },
 ];
+
 
 const services = [
   { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
@@ -71,17 +72,26 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Stats */}
+    {/* What we specialize in */}
     <section className="bg-card border-b border-border">
-      <div className="container py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {stats.map((s) => (
-          <div key={s.label}>
-            <div className="text-3xl md:text-4xl font-bold text-primary">{s.value}</div>
-            <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
-          </div>
-        ))}
+      <div className="container py-14">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold">What We Specialize In</h2>
+          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+            Hands-on EXIM expertise built on 23+ years in international trade across chemicals, polymers and petrochemicals.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {specialities.map((s) => (
+            <div key={s.title} className="border-l-2 border-accent pl-4">
+              <h3 className="font-semibold text-foreground">{s.title}</h3>
+              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
+
 
     {/* Services Preview */}
     <section className="section-gradient">
