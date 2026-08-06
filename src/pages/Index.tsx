@@ -8,7 +8,12 @@ import heroImage from "@/assets/hero-globe.jpg";
 import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
 import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
-const stats = [{ value: "23+", label: "Years Experience" }];
+const stats = [
+  { value: "120+", label: "Countries Covered" },
+  { value: "5,000+", label: "Reports Delivered" },
+  { value: "98%", label: "Client Satisfaction" },
+  { value: "15+", label: "Years Experience" },
+];
 
 const services = [
   { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
@@ -68,11 +73,11 @@ const Index = () => (
 
     {/* Stats */}
     <section className="bg-card border-b border-border">
-      <div className="container py-12 text-center">
+      <div className="container py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {stats.map((s) => (
           <div key={s.label}>
-            <div className="text-4xl md:text-5xl font-bold text-primary">{s.value}</div>
-            <div className="text-base text-muted-foreground mt-2">{s.label}</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary">{s.value}</div>
+            <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
           </div>
         ))}
       </div>
