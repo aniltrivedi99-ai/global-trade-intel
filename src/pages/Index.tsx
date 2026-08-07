@@ -9,11 +9,27 @@ import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
 import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
 const specialities = [
-  { title: "Documentation & Trade Compliance", desc: "Export-import documentation, LC verification, customs & regulatory compliance." },
-  { title: "Market Intelligence & Data Analysis", desc: "Market research, competitive analysis, HS code, duty & tariff insights." },
-  { title: "New Buyer Search", desc: "Buyer identification and lead generation across target markets." },
-  { title: "Due Diligence", desc: "Business analysis, KYC and credit checks before you commit." },
+  { title: "Export Strategy & International Market Entry", desc: "Market selection, positioning and a practical roadmap to enter new geographies." },
+  { title: "Export Market Research & Buyer Mapping", desc: "Demand research, competitor mapping and buyer identification in target markets." },
+  { title: "Buyer Verification & Commercial Due Diligence", desc: "KYC, credit and background checks before you commit to a counterparty." },
+  { title: "Trade Compliance & Documentation", desc: "Export-import documentation, HS codes, customs and regulatory compliance." },
+  { title: "Letter of Credit (LC) Advisory", desc: "LC scrutiny, negotiation support and documentary trade risk control." },
+  { title: "Export Operations & Supply Chain Coordination", desc: "Order management, freight negotiation and end-to-end shipment coordination." },
+  { title: "AI-enabled Export Intelligence", desc: "Modern data and AI-assisted research turning trade data into clear strategy." },
+  { title: "Training, Workshops & Advisory Support", desc: "Hands-on EXIM training and ongoing advisory support for your team." },
 ];
+
+const marketsServed = ["India", "Middle East", "Africa", "APAC", "South East Asia", "Latin America"];
+
+const industriesServed = [
+  "Agro Commodities",
+  "Chemicals",
+  "Plastics & Polymers",
+  "Engineering & Industrial Products",
+  "Leather Products",
+  "Apparels & Textiles",
+];
+
 
 
 const services = [
