@@ -33,12 +33,12 @@ const industriesServed = [
 
 
 const services = [
-  { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
-  { icon: BarChart3, title: "Market Intelligence", desc: "In-depth analysis of global markets, demand trends, and competitive landscapes." },
-  { icon: TrendingUp, title: "Trade Data Analytics", desc: "Actionable insights from real-time trade data and economic indicators." },
-  { icon: Search, title: "Buyer Search & Due Diligence", desc: "Identify and verify reliable international buyers with comprehensive background checks." },
-  
+  { icon: Globe, title: "Export Strategy & Market Entry", desc: "Practical strategy to enter and expand in international markets." },
+  { icon: BarChart3, title: "Market Research & Buyer Mapping", desc: "Demand trends, competitive landscapes and buyer mapping in target markets." },
+  { icon: Search, title: "Buyer Verification & Due Diligence", desc: "KYC, credit and background verification of international counterparties." },
+  { icon: TrendingUp, title: "Trade Compliance & Documentation", desc: "Documentation, LC advisory, HS codes, customs and regulatory compliance." },
 ];
+
 
 const Index = () => (
   <div>
