@@ -23,14 +23,14 @@ import buyerDueDiligenceWebp from "@/assets/service-buyer-due-diligence.jpg?form
 
 const services = [
   {
-    icon: FileCheck,
-    image: docComplianceImg,
-    imageAvif: docComplianceAvif,
-    imageWebp: docComplianceWebp,
-    imageAlt: "Export documentation and letter of credit paperwork on a desk",
-    title: "Documentation & Trade Compliance",
-    desc: "Export-import documentation, LC verification, customs and regulatory compliance handled end to end.",
-    features: ["Export-import documentation", "LC verification & scrutiny", "HS code classification", "Customs & regulatory compliance"],
+    icon: Globe,
+    image: exportConsultingImg,
+    imageAvif: exportConsultingAvif,
+    imageWebp: exportConsultingWebp,
+    imageAlt: "Container ship and port cranes representing export strategy and market entry",
+    title: "Export Strategy & International Market Entry",
+    desc: "Practical guidance to select markets, position your product and enter new geographies — drawn from 23+ years in chemicals, polymers and petrochemicals.",
+    features: ["Market entry strategy", "Pricing & positioning", "Risk assessment", "Export roadmap"],
   },
   {
     icon: BarChart3,
@@ -38,9 +38,9 @@ const services = [
     imageAvif: marketIntelligenceAvif,
     imageWebp: marketIntelligenceWebp,
     imageAlt: "Analysts reviewing global market research charts and world map",
-    title: "Market Intelligence & Data Analysis",
-    desc: "Market research, competitive analysis, HS code, duty and tariff insights for informed decisions.",
-    features: ["Market research", "Competitor mapping", "Duty & tariff insights", "Country profiles", "Sector deep dives", "Opportunity scoring"],
+    title: "Export Market Research & Buyer Mapping",
+    desc: "Market research, competitive analysis, duty and tariff insights, and buyer mapping across target markets.",
+    features: ["Market research", "Competitor mapping", "Buyer identification", "Duty & tariff insights", "Country profiles", "Sector deep dives"],
   },
   {
     icon: Search,
@@ -48,9 +48,19 @@ const services = [
     imageAvif: buyerDueDiligenceAvif,
     imageWebp: buyerDueDiligenceWebp,
     imageAlt: "Business handshake over a verification checklist for buyer due diligence",
-    title: "New Buyer Search & Due Diligence",
-    desc: "Buyer identification across target markets, backed by KYC and credit verification before you commit.",
-    features: ["Buyer identification", "Lead generation", "KYC verification", "Credit assessment"],
+    title: "Buyer Verification & Commercial Due Diligence",
+    desc: "KYC, credit assessment and commercial background checks before you commit to a counterparty.",
+    features: ["KYC verification", "Credit assessment", "Legal & statutory checks", "Operational review"],
+  },
+  {
+    icon: FileCheck,
+    image: docComplianceImg,
+    imageAvif: docComplianceAvif,
+    imageWebp: docComplianceWebp,
+    imageAlt: "Export documentation and letter of credit paperwork on a desk",
+    title: "Trade Compliance & Documentation",
+    desc: "Export-import documentation, HS code classification, customs and regulatory compliance handled end to end.",
+    features: ["Export-import documentation", "HS code classification", "Customs compliance", "FTA rules of origin"],
   },
   {
     icon: TrendingUp,
@@ -58,22 +68,41 @@ const services = [
     imageAvif: tradeAnalyticsAvif,
     imageWebp: tradeAnalyticsWebp,
     imageAlt: "Trade data analytics dashboard with charts on monitors",
-    title: "Trade Data Analytics",
-    desc: "Insights from trade data and economic indicators to track flows, pricing and demand shifts.",
+    title: "AI-enabled Export Intelligence",
+    desc: "Modern data and AI-assisted research that turns trade data and economic indicators into clear, actionable strategy.",
     features: ["Trade flow analysis", "Tariff impact review", "Supply chain mapping", "Custom reports"],
+  },
+];
+
+const additionalServices = [
+  {
+    icon: FileCheck,
+    title: "Letter of Credit (LC) Advisory",
+    desc: "LC scrutiny, negotiation support and documentary trade risk control — B/L, COO and shipping certificates reviewed for clean presentation.",
   },
   {
     icon: Globe,
-    image: exportConsultingImg,
-    imageAvif: exportConsultingAvif,
-    imageWebp: exportConsultingWebp,
-    imageAlt: "Container ship and port cranes representing export consulting services",
-    title: "Export Consulting",
-    desc: "Practical guidance to enter and expand in international markets, drawn from 23+ years in chemicals, polymers and petrochemicals.",
-    features: ["Market entry strategy", "Pricing & positioning", "Risk assessment", "Export strategy"],
+    title: "Export Operations & Supply Chain Coordination",
+    desc: "Order management, freight negotiation, logistics coordination and end-to-end shipment follow-through.",
   },
-
+  {
+    icon: Users,
+    title: "Training, Workshops & Advisory Support",
+    desc: "Hands-on EXIM training for your team plus ongoing advisory support on live shipments and market decisions.",
+  },
 ];
+
+const marketsServed = ["India", "Middle East", "Africa", "APAC", "South East Asia", "Latin America"];
+
+const industriesServed = [
+  "Agro Commodities",
+  "Chemicals",
+  "Plastics & Polymers",
+  "Engineering & Industrial Products",
+  "Leather Products",
+  "Apparels & Textiles",
+];
+
 
 
 const Services = () => (
