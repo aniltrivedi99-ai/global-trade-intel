@@ -162,7 +162,43 @@ const Services = () => (
       ))}
     </section>
 
+    <section className="bg-card border-y border-border">
+      <div className="container py-16">
+        <h2 className="text-2xl font-bold mb-8 text-center">Additional Advisory Support</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {additionalServices.map((s) => (
+            <div key={s.title} className="bg-background rounded-lg p-6 border border-border">
+              <s.icon className="h-8 w-8 text-accent mb-4" />
+              <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="container py-16 grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 className="text-xl font-bold mb-4">Markets Served</h2>
+        <ul className="flex flex-wrap gap-2">
+          {marketsServed.map((m) => (
+            <li key={m} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{m}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 className="text-xl font-bold mb-4">Industries Served</h2>
+        <ul className="flex flex-wrap gap-2">
+          {industriesServed.map((i) => (
+            <li key={i} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{i}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
     <KYCMatrix />
+
+
 
 
     <section className="bg-primary">
