@@ -23,14 +23,15 @@ const Footer = () => (
       <div>
         <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">Services</h4>
         <ul className="space-y-2 text-sm text-primary-foreground/70">
-          <li>Export Consulting</li>
-          <li>Market Intelligence</li>
-          <li>Trade Data Analysis</li>
-          
-          <li>Buyer Search &amp; Due Diligence</li>
-          <li>Risk Analysis</li>
-          <li>Export Strategy</li>
-          <li>Trade Compliance</li>
+          <li>Export Strategy &amp; Market Entry</li>
+          <li>Export Market Research &amp; Buyer Mapping</li>
+          <li>Buyer Verification &amp; Due Diligence</li>
+          <li>Trade Compliance &amp; Documentation</li>
+          <li>Letter of Credit (LC) Advisory</li>
+          <li>Export Operations &amp; Supply Chain</li>
+          <li>AI-enabled Export Intelligence</li>
+          <li>Training, Workshops &amp; Advisory</li>
+
         </ul>
       </div>
       <div>

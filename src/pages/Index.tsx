@@ -9,20 +9,36 @@ import heroAvif from "@/assets/hero-globe.jpg?format=avif&w=1600&quality=52";
 import heroWebp from "@/assets/hero-globe.jpg?format=webp&w=1600&quality=65";
 
 const specialities = [
-  { title: "Documentation & Trade Compliance", desc: "Export-import documentation, LC verification, customs & regulatory compliance." },
-  { title: "Market Intelligence & Data Analysis", desc: "Market research, competitive analysis, HS code, duty & tariff insights." },
-  { title: "New Buyer Search", desc: "Buyer identification and lead generation across target markets." },
-  { title: "Due Diligence", desc: "Business analysis, KYC and credit checks before you commit." },
+  { title: "Export Strategy & International Market Entry", desc: "Market selection, positioning and a practical roadmap to enter new geographies." },
+  { title: "Export Market Research & Buyer Mapping", desc: "Demand research, competitor mapping and buyer identification in target markets." },
+  { title: "Buyer Verification & Commercial Due Diligence", desc: "KYC, credit and background checks before you commit to a counterparty." },
+  { title: "Trade Compliance & Documentation", desc: "Export-import documentation, HS codes, customs and regulatory compliance." },
+  { title: "Letter of Credit (LC) Advisory", desc: "LC scrutiny, negotiation support and documentary trade risk control." },
+  { title: "Export Operations & Supply Chain Coordination", desc: "Order management, freight negotiation and end-to-end shipment coordination." },
+  { title: "AI-enabled Export Intelligence", desc: "Modern data and AI-assisted research turning trade data into clear strategy." },
+  { title: "Training, Workshops & Advisory Support", desc: "Hands-on EXIM training and ongoing advisory support for your team." },
 ];
+
+const marketsServed = ["India", "Middle East", "Africa", "APAC", "South East Asia", "Latin America"];
+
+const industriesServed = [
+  "Agro Commodities",
+  "Chemicals",
+  "Plastics & Polymers",
+  "Engineering & Industrial Products",
+  "Leather Products",
+  "Apparels & Textiles",
+];
+
 
 
 const services = [
-  { icon: Globe, title: "Export Consulting", desc: "Strategic guidance to help you enter and expand in international markets." },
-  { icon: BarChart3, title: "Market Intelligence", desc: "In-depth analysis of global markets, demand trends, and competitive landscapes." },
-  { icon: TrendingUp, title: "Trade Data Analytics", desc: "Actionable insights from real-time trade data and economic indicators." },
-  { icon: Search, title: "Buyer Search & Due Diligence", desc: "Identify and verify reliable international buyers with comprehensive background checks." },
-  
+  { icon: Globe, title: "Export Strategy & Market Entry", desc: "Practical strategy to enter and expand in international markets." },
+  { icon: BarChart3, title: "Market Research & Buyer Mapping", desc: "Demand trends, competitive landscapes and buyer mapping in target markets." },
+  { icon: Search, title: "Buyer Verification & Due Diligence", desc: "KYC, credit and background verification of international counterparties." },
+  { icon: TrendingUp, title: "Trade Compliance & Documentation", desc: "Documentation, LC advisory, HS codes, customs and regulatory compliance." },
 ];
+
 
 const Index = () => (
   <div>
@@ -72,13 +88,13 @@ const Index = () => (
       </div>
     </section>
 
-    {/* What we specialize in */}
+    {/* Specialized in */}
     <section className="bg-card border-b border-border">
       <div className="container py-14">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold">What We Specialize In</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">Specialized In</h2>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Hands-on EXIM expertise built on 23+ years in international trade across chemicals, polymers and petrochemicals.
+            International trade, export strategy, market intelligence and trade compliance consulting — built on 23+ years of hands-on EXIM experience.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -91,6 +107,29 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* Markets & Industries served */}
+    <section className="border-b border-border">
+      <div className="container py-14 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 className="text-xl font-bold mb-4">Markets Served</h2>
+          <ul className="flex flex-wrap gap-2">
+            {marketsServed.map((m) => (
+              <li key={m} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{m}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-xl font-bold mb-4">Industries Served</h2>
+          <ul className="flex flex-wrap gap-2">
+            {industriesServed.map((i) => (
+              <li key={i} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{i}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
 
     {/* Services Preview */}
