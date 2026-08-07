@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE = "https://export-intel-hub.lovable.app";
+const SITE = "https://global-trade-intel.lovable.app";
 
 type Props = {
   title: string;
