@@ -1,4 +1,4 @@
-import { Globe, BarChart3, TrendingUp, Search, FileCheck, ArrowRight } from "lucide-react";
+import { Globe, BarChart3, TrendingUp, Search, FileCheck, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
