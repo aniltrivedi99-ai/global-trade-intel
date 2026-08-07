@@ -88,13 +88,13 @@ const Index = () => (
       </div>
     </section>
 
-    {/* What we specialize in */}
+    {/* Specialized in */}
     <section className="bg-card border-b border-border">
       <div className="container py-14">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold">What We Specialize In</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">Specialized In</h2>
           <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Hands-on EXIM expertise built on 23+ years in international trade across chemicals, polymers and petrochemicals.
+            International trade, export strategy, market intelligence and trade compliance consulting — built on 23+ years of hands-on EXIM experience.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -107,6 +107,29 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* Markets & Industries served */}
+    <section className="border-b border-border">
+      <div className="container py-14 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 className="text-xl font-bold mb-4">Markets Served</h2>
+          <ul className="flex flex-wrap gap-2">
+            {marketsServed.map((m) => (
+              <li key={m} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{m}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-xl font-bold mb-4">Industries Served</h2>
+          <ul className="flex flex-wrap gap-2">
+            {industriesServed.map((i) => (
+              <li key={i} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-foreground">{i}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
 
     {/* Services Preview */}
