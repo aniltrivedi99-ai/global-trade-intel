@@ -43,7 +43,7 @@ const services = [
 const Index = () => (
   <div>
     <SEO
-      title="Export & Import Consulting | Trade Intelligence, Buyer Search & KYC"
+      title="Export & Import Consulting | Global Trade Intel, Buyer Search & KYC"
       description="Data-driven export-import consulting: global trade analytics, buyer search & KYC, due diligence, customs and trade compliance, market research and export strategy."
       path="/"
       keywords="export consulting, import consulting, trade intelligence, trade data analytics, buyer search, KYC, due diligence, customs compliance, trade compliance, market research, export strategy, risk analysis"

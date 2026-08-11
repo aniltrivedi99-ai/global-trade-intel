@@ -18,9 +18,10 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <Link to="/" className="text-xl font-bold text-primary tracking-tight">
-          Trade<span className="text-accent">Intelligence</span>
+        <Link to="/" className="text-lg md:text-xl font-bold text-primary tracking-tight whitespace-nowrap">
+          Global Trade <span className="text-accent">Intel</span>
         </Link>
+
 
         {/* Desktop */}
         <nav className="hidden md:flex items-center gap-1">
