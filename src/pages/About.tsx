@@ -123,7 +123,7 @@ const About = () => (
         <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-widest rounded-full bg-accent/20 text-accent mb-4">
           About Global Trade Intel
         </span>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-primary-foreground">
           Practical International Trade Advisory Backed by 23+ Years of EXIM Experience
         </h1>
         <p className="text-primary-foreground/70 text-lg">
