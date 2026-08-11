@@ -25,7 +25,7 @@ const InsightDetail = () => {
   return (
     <div>
       <SEO
-        title={`${article.title} | Trade Intelligence Insights`}
+        title={`${article.title} | Global Trade Intel Insights`}
         description={article.excerpt}
         path={`/insights/${article.slug}`}
         type="article"
@@ -37,8 +37,8 @@ const InsightDetail = () => {
           description: article.excerpt,
           datePublished: article.date,
           articleSection: article.category,
-          author: { "@type": "Organization", name: "Trade Intelligence" },
-          publisher: { "@type": "Organization", name: "Trade Intelligence" },
+          author: { "@type": "Organization", name: "Global Trade Intel" },
+          publisher: { "@type": "Organization", name: "Global Trade Intel" },
         }}
       />
       <section className="bg-primary text-primary-foreground py-16">
