@@ -20,7 +20,6 @@ import {
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import founderPhoto from "@/assets/anil-trivedi.jpg.asset.json";
-
 const advisoryAreas = [
   "Export Strategy & Market Entry",
   "Market Research & Trade Intelligence",
@@ -167,7 +166,7 @@ const About = () => (
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="w-56 flex-shrink-0">
             <img
-              src={founderPhoto.url}
+              src="/anil-trivedi.jpeg"
               alt="Anil G. Trivedi, Founder & International Trade Advisor at Global Trade Intel"
               width={783}
               height={1376}
