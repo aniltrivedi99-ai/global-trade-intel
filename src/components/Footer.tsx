@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container py-12 grid gap-8 md:grid-cols-4">
       <div>
         <h3 className="text-lg font-bold mb-3">
-          Global Trade <span className="text-accent">Intel</span>
+          GlobalTrade<span className="text-accent">Intell</span>
         </h3>
         <p className="text-sm text-primary-foreground/70 leading-relaxed">
           Practical trade intelligence and advisory for exporters, manufacturers and international businesses.
