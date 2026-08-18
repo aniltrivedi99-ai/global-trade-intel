@@ -110,8 +110,8 @@ const credentials = [
 const About = () => (
   <div>
     <SEO
-      title="About Global Trade Intel | International Trade Advisory & EXIM Expertise"
-      description="Learn about Global Trade Intel and its founder, Anil G. Trivedi, with 23+ years of practical EXIM experience in export operations, market research, buyer intelligence, due diligence and trade advisory."
+      title="About Global Trade Intell | International Trade Advisory & EXIM Expertise"
+      description="Learn about Global Trade Intell and its founder, Anil G. Trivedi, with 23+ years of practical EXIM experience in export operations, market research, buyer intelligence, due diligence and trade advisory."
       path="/about"
       keywords="international trade consultant, export-import consultant, EXIM consultant, export market research, buyer identification, buyer due diligence, trade intelligence, export compliance, international trade advisory, export strategy, trade risk assessment"
     />
@@ -120,13 +120,13 @@ const About = () => (
     <section className="bg-primary text-primary-foreground py-20">
       <div className="container text-center max-w-3xl">
         <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-widest rounded-full bg-accent/20 text-accent mb-4">
-          About Global Trade Intel
+          About Global Trade Intell
         </span>
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-primary-foreground">
           Practical International Trade Advisory Backed by 23+ Years of EXIM Experience
         </h1>
         <p className="text-primary-foreground/70 text-lg">
-          Global Trade Intel helps exporters, manufacturers and international businesses make better trade decisions
+          Global Trade Intell helps exporters, manufacturers and international businesses make better trade decisions
           through practical EXIM expertise, market research, buyer intelligence, due diligence and risk-focused advisory.
         </p>
       </div>
@@ -167,7 +167,7 @@ const About = () => (
           <div className="w-56 flex-shrink-0">
             <img
               src="/anil-trivedi.jpeg"
-              alt="Anil G. Trivedi, Founder & International Trade Advisor at Global Trade Intel"
+              alt="Anil G. Trivedi, Founder & International Trade Advisor at Global Trade Intell"
               width={783}
               height={1376}
               loading="lazy"
@@ -205,9 +205,9 @@ const About = () => (
       </div>
     </section>
 
-    {/* Why Global Trade Intel */}
+    {/* Why Global Trade Intell */}
     <section className="container py-16">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8">Why Global Trade Intel?</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-8">Why Global Trade Intell?</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {whyUs.map((w) => (
           <div key={w.title} className="bg-card rounded-lg p-6 border border-border shadow-sm">
@@ -273,7 +273,7 @@ const About = () => (
       <div>
         <h2 className="text-2xl font-bold mb-3">Experience That Shapes Our Advisory Approach</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Before establishing Global Trade Intel, Anil built extensive practical experience across international trade,
+          Before establishing Global Trade Intell, Anil built extensive practical experience across international trade,
           export operations, polymers, chemicals, petrochemicals and commercial operations — including SAP-based order
           management. This experience provides a practical understanding of the operational, documentation, financial,
           compliance and logistics challenges faced by exporters.

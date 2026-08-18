@@ -44,7 +44,7 @@ const Footer = () => (
     </div>
     <div className="border-t border-primary-foreground/10">
       <div className="container py-4 text-center text-xs text-primary-foreground/50">
-        © {new Date().getFullYear()} Global Trade Intel. All rights reserved.
+        © {new Date().getFullYear()} l. All rights reserved.
       </div>
     </div>
   </footer>

@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <div>
       <SEO
-        title="Contact Global Trade Intel | International Trade Advisory, Mumbai India"
+        title="Contact Global Trade Intell | International Trade Advisory, Mumbai India"
         description="Talk to our export-import consultants for trade data, buyer search, KYC, due diligence and customs compliance. Based in Kandivali (West), Mumbai, India."
         path="/contact"
         keywords="contact export consultant, import export consultant Mumbai, trade advisory India, buyer search KYC contact"
