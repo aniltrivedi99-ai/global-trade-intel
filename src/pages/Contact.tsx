@@ -73,7 +73,8 @@ const Contact = () => {
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: "Email", value: "aniltrivedi.impex@outlook.com" },
+                  { icon: Mail, label: "Direct Email", value: "anil@globaltradeintell.com" },
+                  { icon: Mail, label: "General Enquiries", value: "info@globaltradeintell.com" },
                   { icon: Phone, label: "Phone", value: "+91 9870446898" },
                   { icon: MapPin, label: "Office", value: "B-602, Solitaire, M.G. Cross Road No.1, Kandivali (West), Mumbai 400067, Maharashtra, India." },
                 ].map((c) => (
