@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO";
 
-const OWNER_EMAIL = "aniltrivedi.impex@outlook.com";
+const OWNER_EMAIL = "anil@globaltradeintell.com";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -39,7 +39,7 @@ const Contact = () => {
     if (error) {
       toast({
         title: "Couldn't send message",
-        description: "Please try again, or email us directly at aniltrivedi.impex@outlook.com.",
+        description: "Please try again, or email us directly at anil@globaltradeintell.com.",
         variant: "destructive",
       });
       return;
