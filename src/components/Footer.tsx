@@ -35,7 +35,8 @@ const Footer = () => (
       <div>
         <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-primary-foreground/80">Contact</h4>
         <ul className="space-y-2 text-sm text-primary-foreground/70">
-          <li>aniltrivedi.impex@outlook.com</li>
+          <li>anil@globaltradeintell.com</li>
+          <li>info@globaltradeintell.com</li>
           <li>+91 9870446898</li>
           <li>Mumbai, Maharashtra, India</li>
         </ul>
