@@ -46,7 +46,7 @@ export default async function handler(request, response) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "GlobalTradeIntell Website <onboarding@resend.dev>",
+        from: "GlobalTradeIntell Website <website@globaltradeintell.com>",
         to: [contactEmail],
         reply_to: cleanEmail,
         subject: `New website enquiry - ${cleanName}`,
