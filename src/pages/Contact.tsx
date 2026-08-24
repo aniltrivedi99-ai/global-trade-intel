@@ -27,26 +27,62 @@ const Contact = () => {
 
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    const { error } = await supabase.from("contact_inquiries").insert({
+  e.preventDefault();
+  setSubmitting(true);
+
+  try {
+    const inquiry = {
       name: form.name.trim(),
       email: form.email.trim(),
       company: form.company.trim() || null,
       message: form.message.trim(),
-    });
-    setSubmitting(false);
-    if (error) {
-      toast({
-        title: "Couldn't send message",
-        description: "Please try again, or email us directly at anil@globaltradeintell.com.",
-        variant: "destructive",
-      });
-      return;
+    };
+
+    const { error: databaseError } = await supabase
+      .from("contact_inquiries")
+      .insert(inquiry);
+
+    if (databaseError) {
+      console.error("Database error:", databaseError);
     }
-    toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", company: "", message: "" });
-  };
+
+    const emailResponse = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inquiry),
+    });
+
+    if (!emailResponse.ok) {
+      throw new Error("Email notification failed");
+    }
+
+    toast({
+      title: "Message sent!",
+      description:
+        "Thank you. Your enquiry has been received and we will respond within 24 hours.",
+    });
+
+    setForm({
+      name: "",
+      email: "",
+      company: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error("Contact submission error:", error);
+
+    toast({
+      title: "Couldn't send message",
+      description:
+        "Please try again, or email us directly at anil@globaltradeintell.com.",
+      variant: "destructive",
+    });
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   return (
     <div>
