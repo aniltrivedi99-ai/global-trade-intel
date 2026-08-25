@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE = "https://globaltradeintel.lovable.app";
+const SITE = "https://www.globaltradeintell.com";
 
 type Props = {
   title: string;
