@@ -20,6 +20,7 @@ export const industriesServed = [
   "Chemicals",
   "Plastics & Polymers",
   "Engineering & Industrial Products",
+  "Electronics",
   "Leather Products",
   "Apparels & Textiles",
   "Toys & Games",
