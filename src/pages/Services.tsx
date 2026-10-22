@@ -2,6 +2,7 @@ import { Globe, BarChart3, TrendingUp, Search, FileCheck, Users, ArrowRight } fr
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { industriesServed, marketsServed } from "@/data/siteCoverage";
 import KYCMatrix from "@/components/KYCMatrix";
 import Picture from "@/components/Picture";
 import docComplianceImg from "@/assets/service-documentation-compliance.jpg";
@@ -90,18 +91,11 @@ const additionalServices = [
     title: "Training, Workshops & Advisory Support",
     desc: "Hands-on EXIM training for your team plus ongoing advisory support on live shipments and market decisions.",
   },
-];
 
-const marketsServed = ["India", "Middle East", "Africa", "APAC", "South East Asia", "Latin America"];
 
-const industriesServed = [
-  "Agro Commodities",
-  "Chemicals",
-  "Plastics & Polymers",
-  "Engineering & Industrial Products",
-  "Leather Products",
-  "Apparels & Textiles",
-];
+
+
+
 
 
 
