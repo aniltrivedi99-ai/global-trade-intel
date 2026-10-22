@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Globe, Search, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { industriesServed, marketsServed } from "@/data/siteCoverage";
 import GlobalTradeMap from "@/components/GlobalTradeMap";
 import Picture from "@/components/Picture";
 import heroImage from "@/assets/hero-globe.jpg";
@@ -19,16 +20,8 @@ const specialities = [
   { title: "Training, Workshops & Advisory Support", desc: "Hands-on EXIM training and ongoing advisory support for your team." },
 ];
 
-const marketsServed = ["India", "Middle East", "Africa", "APAC", "South East Asia", "Latin America"];
 
-const industriesServed = [
-  "Agro Commodities",
-  "Chemicals",
-  "Plastics & Polymers",
-  "Engineering & Industrial Products",
-  "Leather Products",
-  "Apparels & Textiles",
-];
+
 
 
 
