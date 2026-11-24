@@ -27,6 +27,7 @@ export type Article = {
   excerpt: string;
   category: string;
   date: string;
+  dateISO?: string;
   readTime: string;
   content: string[];
   sources?: { label: string; url: string }[];
@@ -44,6 +45,7 @@ export const articles: Article[] = [
       "The EU has imposed a definitive 9.5% anti-dumping duty on specified Indian cold-rolled steel and introduced customs registration for specified Indian-origin PVDF. The legal status, product scope and exporter response are different in each case.",
     category: "Trade Policy",
     date: "Nov 24, 2026",
+    dateISO: "2026-11-24",
     readTime: "7 min",
     content: [
       "Two recent EU trade-defence developments warrant attention from Indian manufacturers and exporters. One is a definitive anti-dumping duty on specified cold-rolled flat steel products. The other is customs registration of specified PVDF imports while an anti-dumping investigation continues. They should not be treated as equivalent: the steel duty is in force, while the PVDF registration preserves the possibility of a future retroactive duty if the legal conditions are ultimately met.",
