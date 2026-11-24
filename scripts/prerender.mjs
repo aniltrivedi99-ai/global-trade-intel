@@ -6,6 +6,7 @@ const root = process.cwd();
 const dist = resolve(root, "dist");
 const manifestPath = join(dist, ".vite", "manifest.json");
 const templatePath = join(dist, "index.html");
+const site = "https://www.globaltradeintell.com";
 
 const vite = await createServer({
   configFile: resolve(root, "vite.config.ts"),
@@ -15,9 +16,14 @@ const vite = await createServer({
 });
 
 try {
-  const { getPrerenderPaths, render } = await vite.ssrLoadModule("/src/entry-server.tsx");
+  const {
+    getPrerenderPaths,
+    getPrerenderAssetMappings,
+    render,
+  } = await vite.ssrLoadModule("/src/entry-server.tsx");
   const template = await readFile(templatePath, "utf8");
   const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  const assetMappings = getPrerenderAssetMappings();
 
   const cleanTemplate = template
     .split("\n")
@@ -39,26 +45,66 @@ try {
 
   for (const route of getPrerenderPaths()) {
     const rendered = render(route);
-    let pageHtml = rendered.html;
+    let pageHtml = rendered.html + "\n" + rendered.head;
 
-    for (const [key, asset] of Object.entries(manifest)) {
-      if (!asset.file) continue;
-      const devAssetUrl = "/" + key;
-      const productionAssetUrl = "/" + asset.file;
-      if (pageHtml.includes(devAssetUrl)) {
-        pageHtml = pageHtml.split(devAssetUrl).join(productionAssetUrl);
+    for (const mapping of assetMappings) {
+      const asset = manifest[mapping.manifestKey];
+      if (!asset?.file) {
+        throw new Error(
+          "No production manifest asset for " +
+            mapping.manifestKey +
+            " (used by " +
+            mapping.renderedUrl +
+            ")",
+        );
+      }
+
+      const productionUrl = "/" + asset.file;
+      pageHtml = pageHtml.split(mapping.renderedUrl).join(productionUrl);
+
+      if (mapping.renderedUrl.startsWith("/")) {
+        const absoluteSource = site + mapping.renderedUrl;
+        const absoluteProduction = site + productionUrl;
+        pageHtml = pageHtml.split(absoluteSource).join(absoluteProduction);
       }
     }
 
-    if (pageHtml.includes("/src/assets/")) {
-      throw new Error("Unresolved source asset URL while pre-rendering " + route);
+    if (pageHtml.includes("/src/assets/") || pageHtml.includes("/@imagetools/")) {
+      throw new Error("Unresolved source or development image URL while pre-rendering " + route);
+    }
+
+    const [bodyHtml, headHtml] = [rendered.html, rendered.head];
+    let resolvedBody = bodyHtml;
+    for (const mapping of assetMappings) {
+      const asset = manifest[mapping.manifestKey];
+      const productionUrl = "/" + asset.file;
+      resolvedBody = resolvedBody.split(mapping.renderedUrl).join(productionUrl);
+    }
+
+    const resolvedHead = assetMappings.reduce((head, mapping) => {
+      const asset = manifest[mapping.manifestKey];
+      const productionUrl = "/" + asset.file;
+      const absoluteSource = site + mapping.renderedUrl;
+      const absoluteProduction = site + productionUrl;
+      return head
+        .split(absoluteSource).join(absoluteProduction)
+        .split(mapping.renderedUrl).join(productionUrl);
+    }, headHtml);
+
+    if (
+      resolvedBody.includes("/src/assets/") ||
+      resolvedBody.includes("/@imagetools/") ||
+      resolvedHead.includes("/src/assets/") ||
+      resolvedHead.includes("/@imagetools/")
+    ) {
+      throw new Error("Unresolved image URL remains in pre-rendered output for " + route);
     }
 
     const outputHtml = cleanTemplate
-      .replace('<div id="root"></div>', '<div id="root">' + pageHtml + "</div>")
-      .replace("</head>", rendered.head + "\n  </head>");
+      .replace('<div id="root"></div>', '<div id="root">' + resolvedBody + "</div>")
+      .replace("</head>", resolvedHead + "\n  </head>");
 
-    const relativePath = route === "/" ? "index.html" : join(route.slice(1), "index.html");
+    const relativePath = join(route.slice(1), "index.html");
     const outputPath = join(dist, relativePath);
     await mkdir(dirname(outputPath), { recursive: true });
     await writeFile(outputPath, outputHtml, "utf8");
