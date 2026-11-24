@@ -9,6 +9,32 @@ export const getPrerenderPaths = () => [
   ...articles.map((article) => "/insights/" + article.slug),
 ];
 
+const assetPath = (value: string) => value.replace(/^\/+/, "");
+
+export const getPrerenderAssetMappings = () => {
+  const mappings = articles.flatMap((article) => {
+    const originalAsset = assetPath(article.image);
+    return [
+      { renderedUrl: article.image, manifestKey: originalAsset },
+      {
+        renderedUrl: article.imageAvif,
+        manifestKey: originalAsset + "?format=avif&w=720&quality=55",
+      },
+      {
+        renderedUrl: article.imageWebp,
+        manifestKey: originalAsset + "?format=webp&w=720&quality=68",
+      },
+    ];
+  });
+
+  mappings.push({
+    renderedUrl: "/src/assets/hero-globe.jpg",
+    manifestKey: "src/assets/hero-globe.jpg",
+  });
+
+  return mappings;
+};
+
 export function render(url: string) {
   const helmetContext = {} as { helmet?: any };
   const html = renderToString(
