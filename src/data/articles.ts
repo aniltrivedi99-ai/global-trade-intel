@@ -28,6 +28,8 @@ export type Article = {
   category: string;
   date: string;
   dateISO?: string;
+  dateModifiedISO?: string;
+  autoPublished?: boolean;
   readTime: string;
   content: string[];
   seoTitle?: string;

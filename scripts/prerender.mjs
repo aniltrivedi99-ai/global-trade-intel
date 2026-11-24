@@ -19,6 +19,7 @@ try {
   const {
     getPrerenderPaths,
     getPrerenderAssetMappings,
+    getSitemapArticleEntries,
     render,
   } = await vite.ssrLoadModule("/src/entry-server.tsx");
   const template = await readFile(templatePath, "utf8");
@@ -98,6 +99,68 @@ try {
     await writeFile(outputPath, outputHtml, "utf8");
     process.stdout.write("Pre-rendered " + route + " -> " + relativePath + "\n");
   }
+
+  // Generate the sitemap from the canonical routes and current article records on every build.
+  // This keeps new weekly articles discoverable without manually editing or resubmitting the sitemap.
+  const sitemapStaticEntries = [
+    { path: "/", changefreq: "weekly", priority: "1.0" },
+    { path: "/about", changefreq: "monthly", priority: "0.8" },
+    { path: "/services", changefreq: "monthly", priority: "0.9" },
+    { path: "/insights", changefreq: "weekly", priority: "0.8" },
+    { path: "/contact", changefreq: "monthly", priority: "0.7" },
+  ];
+  const articleEntries = getSitemapArticleEntries();
+  const seenSlugs = new Set();
+
+  for (const article of articleEntries) {
+    if (!article.slug || seenSlugs.has(article.slug)) {
+      throw new Error("Missing or duplicate article slug in sitemap: " + article.slug);
+    }
+    seenSlugs.add(article.slug);
+    if (article.lastmod && !/^\d{4}-\d{2}-\d{2}$/.test(article.lastmod)) {
+      throw new Error("Invalid article last-modified date for " + article.slug + ": " + article.lastmod);
+    }
+  }
+
+  const sitemapUrls = [
+    ...sitemapStaticEntries.map((entry) => ({ ...entry, loc: site + entry.path })),
+    ...articleEntries.map((article) => ({
+      loc: site + "/insights/" + encodeURIComponent(article.slug),
+      lastmod: article.lastmod,
+      changefreq: "monthly",
+      priority: "0.7",
+    })),
+  ];
+
+  const escapeXml = (value) =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&apos;");
+
+  const sitemapXml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...sitemapUrls.map((entry) =>
+      [
+        "  <url>",
+        "    <loc>" + escapeXml(entry.loc) + "</loc>",
+        ...(entry.lastmod ? ["    <lastmod>" + escapeXml(entry.lastmod) + "</lastmod>"] : []),
+        ...(entry.changefreq ? ["    <changefreq>" + entry.changefreq + "</changefreq>"] : []),
+        ...(entry.priority ? ["    <priority>" + entry.priority + "</priority>"] : []),
+        "  </url>",
+      ].join("\n"),
+    ),
+    "</urlset>",
+    "",
+  ].join("\n");
+
+  await writeFile(join(dist, "sitemap.xml"), sitemapXml, "utf8");
+  process.stdout.write(
+    "Generated sitemap.xml with " + sitemapUrls.length + " URLs (" + articleEntries.length + " articles)\n",
+  );
 } finally {
   await vite.close();
 }
