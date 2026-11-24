@@ -30,6 +30,12 @@ export type Article = {
   dateISO?: string;
   readTime: string;
   content: string[];
+  seoTitle?: string;
+  seoDescription?: string;
+  searchKeywords?: string[];
+  byline?: string;
+  sections?: { id: string; heading: string; paragraphs: string[] }[];
+  faqs?: { question: string; answer: string }[];
   sources?: { label: string; url: string }[];
 };
 
@@ -47,14 +53,88 @@ export const articles: Article[] = [
     date: "Nov 24, 2026",
     dateISO: "2026-11-24",
     readTime: "5 min",
-    content: [
-      "DGFT issued three amendments under Niryat Disha on 17 November 2026: Trade Notices 35, 36 and 37/2026-27 for Market Access Support (MAS), Logistics Interventions for Freight and Transport (LIFT), and Trade Regulations, Accreditation and Compliance Enablement (TRACE). The Department of Commerce summarised them in a Press Information Bureau release on 18 November.",
-      "MAS: The preceding-year export-turnover ceiling for eligible airfare support at Buyer-Seller Meets, trade fairs and trade delegations has risen from ₹75 lakh to ₹50 crore. Reimbursement is up to 95% of eligible economy-class airfare for Micro and Small enterprises and 80% for other eligible exporters, within prescribed regional caps. The specified new-IEC registration period and organising-agency membership period before an event have each been reduced from six months to three months. This is not a general travel grant.",
-      "LIFT: DGFT's detailed notice identifies 308 low-export-intensity districts across 21 States/UTs; the PIB release describes wider programme coverage increasing from 13 to 34 States/UTs. Partial freight reimbursement is available to eligible MSMEs shipping from listed districts, except for negative-list items. Covered movement points now include Land Customs Stations and Integrated Check Posts with attached CFS, and inland waterways are recognised alongside road and rail. The minimum distance falls from 200 km to 100 km; inland freight reimbursement is capped at 400 km, including multimodal movement. Air-freight support also covers Jammu & Kashmir and Ladakh, in addition to the North Eastern Region. Claims require freight invoices, proof of payment, shipping bills and e-way bills; land-frontier exports also require the accepted Bill of Export.",
-      "TRACE: The annexure of eligible testing, inspection and certification entries has expanded from 462 to 600. This widens the list; it does not make every test or certificate eligible. Match the exact requirement to the current annexure and TRACE guidelines before placing an order.",
-      "Before incurring costs, identify the relevant intervention and check the current operational guidelines. For MAS, verify turnover, event, delegate, organiser-membership and airfare-ceiling conditions. For LIFT, confirm MSME status, district, product negative-list status, route, distance and supporting shipment evidence. For TRACE, confirm that the proposed test or certificate is included in the eligible list. Retain quotations, invoices, payment proof and resulting certificates or reports.",
-      "The amendments apply prospectively from 17 November 2026; all other provisions of the earlier guidelines remain in force. Reimbursement is conditional on meeting the scheme rules, claim approval and available budget. A district or product appearing in a list does not by itself establish entitlement.",
-      "These changes may help qualifying MSMEs manage selected market-development, freight and compliance costs. They are conditional support measures, not assured subsidies. Export costing, product-market viability and destination-market compliance remain essential."
+    seoTitle: "DGFT Niryat Disha 2026: MSME Export Support & Eligibility | GTI",
+    seoDescription:
+      "DGFT's November 2026 Niryat Disha changes explained: MAS airfare assistance, LIFT freight reimbursement and TRACE testing and certification support for eligible MSME exporters.",
+    searchKeywords: [
+      "DGFT Niryat Disha 2026",
+      "Niryat Disha scheme for MSME exporters",
+      "Export Promotion Mission",
+      "MAS airfare assistance",
+      "LIFT freight reimbursement",
+      "TRACE testing and certification support",
+      "DGFT Trade Notice 35/2026-27",
+      "DGFT Trade Notice 36/2026-27",
+      "DGFT Trade Notice 37/2026-27",
+    ],
+    byline: "Global Trade Intell Research Desk",
+    content: [],
+    sections: [
+      {
+        id: "niryat-disha-november-2026-amendments",
+        heading: "What changed under DGFT Niryat Disha in November 2026?",
+        paragraphs: [
+          "DGFT issued three amendments under Niryat Disha on 17 November 2026: Trade Notices 35, 36 and 37/2026-27 for Market Access Support (MAS), Logistics Interventions for Freight and Transport (LIFT), and Trade Regulations, Accreditation and Compliance Enablement (TRACE). The Department of Commerce summarised them in a Press Information Bureau release on 18 November."
+        ]
+      },
+      {
+        id: "mas-airfare-assistance",
+        heading: "Market Access Support (MAS): revised airfare assistance",
+        paragraphs: [
+          "MAS: The preceding-year export-turnover ceiling for eligible airfare support at Buyer-Seller Meets, trade fairs and trade delegations has risen from ₹75 lakh to ₹50 crore. Reimbursement is up to 95% of eligible economy-class airfare for Micro and Small enterprises and 80% for other eligible exporters, within prescribed regional caps. The specified new-IEC registration period and organising-agency membership period before an event have each been reduced from six months to three months. This is not a general travel grant."
+        ]
+      },
+      {
+        id: "lift-freight-reimbursement",
+        heading: "LIFT: freight reimbursement for eligible MSME exporters",
+        paragraphs: [
+          "LIFT: DGFT's detailed notice identifies 308 low-export-intensity districts across 21 States/UTs; the PIB release describes wider programme coverage increasing from 13 to 34 States/UTs. Partial freight reimbursement is available to eligible MSMEs shipping from listed districts, except for negative-list items. Covered movement points now include Land Customs Stations and Integrated Check Posts with attached CFS, and inland waterways are recognised alongside road and rail. The minimum distance falls from 200 km to 100 km; inland freight reimbursement is capped at 400 km, including multimodal movement. Air-freight support also covers Jammu & Kashmir and Ladakh, in addition to the North Eastern Region. Claims require freight invoices, proof of payment, shipping bills and e-way bills; land-frontier exports also require the accepted Bill of Export."
+        ]
+      },
+      {
+        id: "trace-testing-certification-support",
+        heading: "TRACE: expanded eligible testing and certification list",
+        paragraphs: [
+          "TRACE: The annexure of eligible testing, inspection and certification entries has expanded from 462 to 600. This widens the list; it does not make every test or certificate eligible. Match the exact requirement to the current annexure and TRACE guidelines before placing an order."
+        ]
+      },
+      {
+        id: "exporter-eligibility-and-documentation-checks",
+        heading: "What exporters should check before incurring costs",
+        paragraphs: [
+          "Before incurring costs, identify the relevant intervention and check the current operational guidelines. For MAS, verify turnover, event, delegate, organiser-membership and airfare-ceiling conditions. For LIFT, confirm MSME status, district, product negative-list status, route, distance and supporting shipment evidence. For TRACE, confirm that the proposed test or certificate is included in the eligible list. Retain quotations, invoices, payment proof and resulting certificates or reports.",
+          "The amendments apply prospectively from 17 November 2026; all other provisions of the earlier guidelines remain in force. Reimbursement is conditional on meeting the scheme rules, claim approval and available budget. A district or product appearing in a list does not by itself establish entitlement."
+        ]
+      },
+      {
+        id: "implications-for-indian-msme-exporters",
+        heading: "What these changes mean for Indian MSME exporters",
+        paragraphs: [
+          "These changes may help qualifying MSMEs manage selected market-development, freight and compliance costs. They are conditional support measures, not assured subsidies. Export costing, product-market viability and destination-market compliance remain essential."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What is Niryat Disha under the Export Promotion Mission?",
+        answer: "This article covers three Niryat Disha interventions amended by DGFT on 17 November 2026: Market Access Support (MAS), Logistics Interventions for Freight and Transport (LIFT), and Trade Regulations, Accreditation and Compliance Enablement (TRACE)."
+      },
+      {
+        question: "How much airfare assistance is available under MAS?",
+        answer: "The amended provisions provide reimbursement of up to 95% of eligible economy-class airfare for Micro and Small enterprises and up to 80% for other eligible exporters, subject to prescribed regional caps and the scheme's event, delegate and other eligibility conditions."
+      },
+      {
+        question: "What is the minimum distance for LIFT freight reimbursement?",
+        answer: "The amended minimum distance is 100 km. Inland freight reimbursement is capped at 400 km, including multimodal movement, subject to the detailed LIFT guidelines and other eligibility conditions."
+      },
+      {
+        question: "Does every export test or certificate qualify under TRACE?",
+        answer: "No. The eligible testing, inspection and certification annexure has expanded from 462 to 600 entries, but exporters must match the specific test or certificate to the current eligible list and TRACE guidelines before incurring the expense."
+      },
+      {
+        question: "Are Niryat Disha reimbursements automatic?",
+        answer: "No. Reimbursement depends on compliance with the applicable scheme rules, supporting documents, claim approval and available budget. Inclusion of a district, product or activity in a list does not by itself establish entitlement."
+      }
     ],
     sources: [
       {
