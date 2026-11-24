@@ -81,21 +81,21 @@ export const articles: Article[] = [
         id: "mas-airfare-assistance",
         heading: "Market Access Support (MAS): revised airfare assistance",
         paragraphs: [
-          "MAS: The preceding-year export-turnover ceiling for eligible airfare support at Buyer-Seller Meets, trade fairs and trade delegations has risen from ₹75 lakh to ₹50 crore. Reimbursement is up to 95% of eligible economy-class airfare for Micro and Small enterprises and 80% for other eligible exporters, within prescribed regional caps. The specified new-IEC registration period and organising-agency membership period before an event have each been reduced from six months to three months. This is not a general travel grant."
+          "The preceding-year export-turnover ceiling for eligible airfare support at Buyer-Seller Meets, trade fairs and trade delegations has risen from ₹75 lakh to ₹50 crore. Reimbursement is up to 95% of eligible economy-class airfare for Micro and Small enterprises and 80% for other eligible exporters, within prescribed regional caps. The specified new-IEC registration period and organising-agency membership period before an event have each been reduced from six months to three months. This is not a general travel grant."
         ]
       },
       {
         id: "lift-freight-reimbursement",
         heading: "LIFT: freight reimbursement for eligible MSME exporters",
         paragraphs: [
-          "LIFT: DGFT's detailed notice identifies 308 low-export-intensity districts across 21 States/UTs; the PIB release describes wider programme coverage increasing from 13 to 34 States/UTs. Partial freight reimbursement is available to eligible MSMEs shipping from listed districts, except for negative-list items. Covered movement points now include Land Customs Stations and Integrated Check Posts with attached CFS, and inland waterways are recognised alongside road and rail. The minimum distance falls from 200 km to 100 km; inland freight reimbursement is capped at 400 km, including multimodal movement. Air-freight support also covers Jammu & Kashmir and Ladakh, in addition to the North Eastern Region. Claims require freight invoices, proof of payment, shipping bills and e-way bills; land-frontier exports also require the accepted Bill of Export."
+          "DGFT's detailed notice identifies 308 low-export-intensity districts across 21 States/UTs; the PIB release describes wider programme coverage increasing from 13 to 34 States/UTs. Partial freight reimbursement is available to eligible MSMEs shipping from listed districts, except for negative-list items. Covered movement points now include Land Customs Stations and Integrated Check Posts with attached CFS, and inland waterways are recognised alongside road and rail. The minimum distance falls from 200 km to 100 km; inland freight reimbursement is capped at 400 km, including multimodal movement. Air-freight support also covers Jammu & Kashmir and Ladakh, in addition to the North Eastern Region. Claims require freight invoices, proof of payment, shipping bills and e-way bills; land-frontier exports also require the accepted Bill of Export."
         ]
       },
       {
         id: "trace-testing-certification-support",
         heading: "TRACE: expanded eligible testing and certification list",
         paragraphs: [
-          "TRACE: The annexure of eligible testing, inspection and certification entries has expanded from 462 to 600. This widens the list; it does not make every test or certificate eligible. Match the exact requirement to the current annexure and TRACE guidelines before placing an order."
+          "The annexure of eligible testing, inspection and certification entries has expanded from 462 to 600. This widens the list; it does not make every test or certificate eligible. Match the exact requirement to the current annexure and TRACE guidelines before placing an order."
         ]
       },
       {
@@ -214,6 +214,7 @@ export const articles: Article[] = [
       "Discover which markets are poised for significant growth and how to position your business to take advantage.",
     category: "Market Trends",
     date: "Apr 10, 2026",
+    dateISO: "2026-04-10",
     readTime: "5 min",
     content: [
       "Global trade is shifting. As supply chains diversify away from concentrated hubs, a new wave of high-growth destinations is emerging for exporters in 2026.",
@@ -233,6 +234,7 @@ export const articles: Article[] = [
       "A comprehensive breakdown of the latest EU trade policy changes and their impact on exporters worldwide.",
     category: "Trade Policy",
     date: "Apr 5, 2026",
+    dateISO: "2026-04-05",
     readTime: "8 min",
     content: [
       "The European Union continues to be one of the most demanding regulatory environments in the world — and one of the most rewarding markets for exporters who get compliance right.",
@@ -251,6 +253,7 @@ export const articles: Article[] = [
       "Machine learning and AI are revolutionizing how businesses analyze trade flows and predict market movements.",
     category: "Technology",
     date: "Mar 28, 2026",
+    dateISO: "2026-03-28",
     readTime: "6 min",
     content: [
       "Trade data has always been abundant, but until recently it was hard to turn into actionable intelligence. AI changes that.",
@@ -269,6 +272,7 @@ export const articles: Article[] = [
       "Key takeaways from last year's supply chain disruptions and strategies for building more resilient networks.",
     category: "Supply Chain",
     date: "Mar 20, 2026",
+    dateISO: "2026-03-20",
     readTime: "7 min",
     content: [
       "2025 reminded every exporter that resilience is no longer optional. From the Red Sea diversions to extreme weather affecting key ports, single-source supply chains were repeatedly tested.",
@@ -287,6 +291,7 @@ export const articles: Article[] = [
       "How to leverage ASEAN's expanding trade agreements for competitive advantage in Southeast Asian markets.",
     category: "Market Trends",
     date: "Mar 12, 2026",
+    dateISO: "2026-03-12",
     readTime: "6 min",
     content: [
       "ASEAN has quietly become one of the most preferential trade blocks in the world, with overlapping FTAs covering nearly every major economy.",
@@ -305,6 +310,7 @@ export const articles: Article[] = [
       "Essential steps every new exporter should follow to ensure compliance with international trade regulations.",
     category: "Compliance",
     date: "Mar 5, 2026",
+    dateISO: "2026-03-05",
     readTime: "4 min",
     content: [
       "Compliance failures are the most expensive — and most preventable — mistakes a new exporter can make. A held shipment can wipe out the margin on an entire order.",
