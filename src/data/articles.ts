@@ -62,7 +62,15 @@ export const articles: Article[] = [
         url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337815&lang=1&reg=48"
       },
       {
-        label: "APEDA / Department of Commerce — DGFT Trade Notice register (see Trade Notices 35, 36 and 37/2026-27)",
+        label: "DGFT Trade Notice 35/2026-27 — Market Access Support (official APEDA-hosted PDF)",
+        url: "https://apeda.gov.in/sites/default/files/dgft_trade_notice/Trade_Notice_35_2026_27.pdf"
+      },
+      {
+        label: "DGFT Trade Notice 36/2026-27 — LIFT freight and transport (official APEDA-hosted PDF)",
+        url: "https://apeda.gov.in/sites/default/files/dgft_trade_notice/Trade_Notice_36_2026_27.pdf"
+      },
+      {
+        label: "DGFT Trade Notice 37/2026-27 — TRACE eligible testing, inspection and certification list (official trade notice register)",
         url: "https://apeda.gov.in/dgft-trade-notice"
       }
     ],
