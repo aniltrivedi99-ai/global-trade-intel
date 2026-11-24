@@ -38,7 +38,7 @@ const InsightDetail = () => {
     description: article.seoDescription || article.excerpt,
     image: [imageUrl],
     datePublished: article.dateISO || article.date,
-    dateModified: article.dateISO || article.date,
+    dateModified: article.dateModifiedISO || article.dateISO || article.date,
     articleSection: article.category,
     keywords: article.searchKeywords || [article.category, article.title],
     inLanguage: "en-IN",
