@@ -35,6 +35,47 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "dgft-niryat-disha-msme-export-support-2026",
+    image: complianceChecklistImg,
+    imageAvif: complianceChecklistAvif,
+    imageWebp: complianceChecklistWebp,
+    imageAlt: "Export compliance checklist with pen and coffee under warm lamp light",
+    title: "DGFT Expands Niryat Disha Support: What MSME Exporters Should Check",
+    excerpt:
+      "Three DGFT amendments widen the reach of freight support, market-access assistance and eligible export certification under the Export Promotion Mission. Here is what Indian MSME exporters should review before planning an activity or incurring costs.",
+    category: "Trade Policy",
+    date: "Nov 24, 2026",
+    dateISO: "2026-11-24",
+    readTime: "5 min",
+    content: [
+      "DGFT issued three amendments under Niryat Disha on 17 November 2026: Trade Notices 35, 36 and 37/2026-27 for Market Access Support (MAS), Logistics Interventions for Freight and Transport (LIFT), and Trade Regulations, Accreditation and Compliance Enablement (TRACE). The Department of Commerce summarised them in a Press Information Bureau release on 18 November.",
+      "MAS: The preceding-year export-turnover ceiling for eligible airfare support at Buyer-Seller Meets, trade fairs and trade delegations has risen from ₹75 lakh to ₹50 crore. Reimbursement is up to 95% of eligible economy-class airfare for Micro and Small enterprises and 80% for other eligible exporters, within prescribed regional caps. The specified new-IEC registration period and organising-agency membership period before an event have each been reduced from six months to three months. This is not a general travel grant.",
+      "LIFT: DGFT's detailed notice identifies 308 low-export-intensity districts across 21 States/UTs; the PIB release describes wider programme coverage increasing from 13 to 34 States/UTs. Partial freight reimbursement is available to eligible MSMEs shipping from listed districts, except for negative-list items. Covered movement points now include Land Customs Stations and Integrated Check Posts with attached CFS, and inland waterways are recognised alongside road and rail. The minimum distance falls from 200 km to 100 km; inland freight reimbursement is capped at 400 km, including multimodal movement. Air-freight support also covers Jammu & Kashmir and Ladakh, in addition to the North Eastern Region. Claims require freight invoices, proof of payment, shipping bills and e-way bills; land-frontier exports also require the accepted Bill of Export.",
+      "TRACE: The annexure of eligible testing, inspection and certification entries has expanded from 462 to 600. This widens the list; it does not make every test or certificate eligible. Match the exact requirement to the current annexure and TRACE guidelines before placing an order.",
+      "Before incurring costs, identify the relevant intervention and check the current operational guidelines. For MAS, verify turnover, event, delegate, organiser-membership and airfare-ceiling conditions. For LIFT, confirm MSME status, district, product negative-list status, route, distance and supporting shipment evidence. For TRACE, confirm that the proposed test or certificate is included in the eligible list. Retain quotations, invoices, payment proof and resulting certificates or reports.",
+      "The amendments apply prospectively from 17 November 2026; all other provisions of the earlier guidelines remain in force. Reimbursement is conditional on meeting the scheme rules, claim approval and available budget. A district or product appearing in a list does not by itself establish entitlement.",
+      "These changes may help qualifying MSMEs manage selected market-development, freight and compliance costs. They are conditional support measures, not assured subsidies. Export costing, product-market viability and destination-market compliance remain essential."
+    ],
+    sources: [
+      {
+        label: "Press Information Bureau — Department of Commerce amends four Export Promotion Mission interventions (18 November 2026)",
+        url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337815&lang=1&reg=48"
+      },
+      {
+        label: "DGFT Trade Notice 35/2026-27 — Market Access Support (official APEDA-hosted PDF)",
+        url: "https://apeda.gov.in/sites/default/files/dgft_trade_notice/Trade_Notice_35_2026_27.pdf"
+      },
+      {
+        label: "DGFT Trade Notice 36/2026-27 — LIFT freight and transport (official APEDA-hosted PDF)",
+        url: "https://apeda.gov.in/sites/default/files/dgft_trade_notice/Trade_Notice_36_2026_27.pdf"
+      },
+      {
+        label: "DGFT Trade Notice 37/2026-27 — TRACE eligible testing, inspection and certification list (official trade notice register)",
+        url: "https://apeda.gov.in/dgft-trade-notice"
+      }
+    ],
+  },
+  {
     slug: "eu-trade-defence-indian-steel-pvdf-exports-2026",
     image: euRegulationsImg,
     imageAvif: euRegulationsAvif,
