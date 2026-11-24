@@ -29,6 +29,7 @@ export type Article = {
   date: string;
   dateISO?: string;
   dateModifiedISO?: string;
+  autoPublished?: boolean;
   readTime: string;
   content: string[];
   seoTitle?: string;
