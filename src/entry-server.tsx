@@ -26,8 +26,8 @@ export const getSitemapArticleEntries = () => {
       throw new Error("Automated article is missing a required SEO or publication field: " + article.slug);
     }
     if (
-      !/^\\d{4}-\\d{2}-\\d{2}$/.test(article.dateISO || "") ||
-      !/^\\d{4}-\\d{2}-\\d{2}$/.test(article.dateModifiedISO || "")
+      !/^\d{4}-\d{2}-\d{2}$/.test(article.dateISO || "") ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(article.dateModifiedISO || "")
     ) {
       throw new Error("Automated article has an invalid publication or modified date: " + article.slug);
     }
@@ -39,11 +39,11 @@ export const getSitemapArticleEntries = () => {
     ) {
       throw new Error("Automated article does not meet the minimum SEO/content structure: " + article.slug);
     }
-    if (article.sources.some((source) => !/^https:\\/\\//i.test(source.url))) {
+    if (article.sources.some((source) => !/^https:\/\//i.test(source.url))) {
       throw new Error("Automated article contains a source without an HTTPS URL: " + article.slug);
     }
     const bodyText = article.sections.flatMap((section) => section.paragraphs).join(" ");
-    const bodyWordCount = bodyText.split(/\\s+/).filter(Boolean).length;
+    const bodyWordCount = bodyText.split(/\s+/).filter(Boolean).length;
     if (bodyWordCount < 300) {
       throw new Error("Automated article body is below 300 words: " + article.slug);
     }
