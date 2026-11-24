@@ -9,28 +9,23 @@ export const getPrerenderPaths = () => [
   ...articles.map((article) => "/insights/" + article.slug),
 ];
 
-const assetPath = (value: string) => value.replace(/^\/+/, "");
+const imageMapping = (renderedUrl: string, originalPath: string, format: string) => {
+  const originalFile = originalPath.split("/").pop() || originalPath;
+  const extensionIndex = originalFile.lastIndexOf(".");
+  const assetPrefix = extensionIndex >= 0 ? originalFile.slice(0, extensionIndex) : originalFile;
+  return { renderedUrl, assetPrefix, format };
+};
 
 export const getPrerenderAssetMappings = () => {
-  const mappings = articles.flatMap((article) => {
-    const originalAsset = assetPath(article.image);
-    return [
-      { renderedUrl: article.image, manifestKey: originalAsset },
-      {
-        renderedUrl: article.imageAvif,
-        manifestKey: originalAsset + "?format=avif&w=720&quality=55",
-      },
-      {
-        renderedUrl: article.imageWebp,
-        manifestKey: originalAsset + "?format=webp&w=720&quality=68",
-      },
-    ];
-  });
+  const mappings = articles.flatMap((article) => [
+    imageMapping(article.image, article.image, "jpg"),
+    imageMapping(article.imageAvif, article.image, "avif"),
+    imageMapping(article.imageWebp, article.image, "webp"),
+  ]);
 
-  mappings.push({
-    renderedUrl: "/src/assets/hero-globe.jpg",
-    manifestKey: "src/assets/hero-globe.jpg",
-  });
+  mappings.push(
+    imageMapping("/src/assets/hero-globe.jpg", "/src/assets/hero-globe.jpg", "jpg"),
+  );
 
   return mappings;
 };
