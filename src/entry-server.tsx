@@ -9,6 +9,12 @@ export const getPrerenderPaths = () => [
   ...articles.map((article) => "/insights/" + article.slug),
 ];
 
+export const getSitemapArticleEntries = () =>
+  articles.map((article) => ({
+    slug: article.slug,
+    lastmod: article.dateModifiedISO || article.dateISO,
+  }));
+
 const imageMapping = (renderedUrl: string, originalPath: string, format: string) => {
   const originalFile = originalPath.split("/").pop() || originalPath;
   const extensionIndex = originalFile.lastIndexOf(".");
