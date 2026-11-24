@@ -35,7 +35,7 @@ const InsightDetail = () => {
           "@type": "Article",
           headline: article.title,
           description: article.excerpt,
-          datePublished: article.date,
+          datePublished: article.dateISO || article.date,
           articleSection: article.category,
           author: { "@type": "Organization", name: "Global Trade Intel" },
           publisher: { "@type": "Organization", name: "Global Trade Intel" },
@@ -80,6 +80,30 @@ const InsightDetail = () => {
             {para}
           </p>
         ))}
+        {article.sources && article.sources.length > 0 && (
+          <section
+            aria-labelledby="article-sources-heading"
+            className="pt-6 border-t border-border space-y-3"
+          >
+            <h2 id="article-sources-heading" className="text-lg font-semibold text-foreground">
+              Official sources and further reading
+            </h2>
+            <ul className="space-y-2">
+              {article.sources.map((source) => (
+                <li key={source.url}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-accent underline underline-offset-4 hover:text-primary"
+                  >
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         <div className="pt-8 border-t border-border">
           <Button asChild>
             <Link to="/contact">Talk to our experts</Link>
