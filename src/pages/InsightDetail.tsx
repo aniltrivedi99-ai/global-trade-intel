@@ -35,7 +35,7 @@ const InsightDetail = () => {
           "@type": "Article",
           headline: article.title,
           description: article.excerpt,
-          datePublished: article.date,
+          datePublished: article.dateISO || article.date,
           articleSection: article.category,
           author: { "@type": "Organization", name: "Global Trade Intel" },
           publisher: { "@type": "Organization", name: "Global Trade Intel" },
