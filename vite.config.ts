@@ -6,6 +6,9 @@ import { imagetools } from "vite-imagetools";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  build: {
+    manifest: true,
+  },
   server: {
     host: "::",
     port: 8080,
