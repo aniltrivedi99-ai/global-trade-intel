@@ -1,6 +1,6 @@
 import { createServer } from "vite";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname, join, resolve } from "node:path";
+import { basename, dirname, join, resolve } from "node:path";
 
 const root = process.cwd();
 const dist = resolve(root, "dist");
@@ -23,6 +23,9 @@ try {
   } = await vite.ssrLoadModule("/src/entry-server.tsx");
   const template = await readFile(templatePath, "utf8");
   const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  const manifestEntries = Object.values(manifest).filter(
+    (asset) => asset && typeof asset.file === "string",
+  );
   const assetMappings = getPrerenderAssetMappings();
 
   const cleanTemplate = template
@@ -45,51 +48,36 @@ try {
 
   for (const route of getPrerenderPaths()) {
     const rendered = render(route);
-    let pageHtml = rendered.html + "\n" + rendered.head;
+    let resolvedBody = rendered.html;
+    let resolvedHead = rendered.head;
 
     for (const mapping of assetMappings) {
-      const asset = manifest[mapping.manifestKey];
-      if (!asset?.file) {
+      const candidates = manifestEntries.filter((asset) => {
+        const fileName = basename(asset.file);
+        return (
+          fileName.startsWith(mapping.assetPrefix + "-") &&
+          fileName.endsWith("." + mapping.format)
+        );
+      });
+
+      if (candidates.length !== 1) {
         throw new Error(
-          "No production manifest asset for " +
-            mapping.manifestKey +
-            " (used by " +
-            mapping.renderedUrl +
-            ")",
+          "Expected one production asset for " +
+            mapping.assetPrefix +
+            " (" +
+            mapping.format +
+            "), found " +
+            candidates.length,
         );
       }
 
-      const productionUrl = "/" + asset.file;
-      pageHtml = pageHtml.split(mapping.renderedUrl).join(productionUrl);
-
-      if (mapping.renderedUrl.startsWith("/")) {
-        const absoluteSource = site + mapping.renderedUrl;
-        const absoluteProduction = site + productionUrl;
-        pageHtml = pageHtml.split(absoluteSource).join(absoluteProduction);
-      }
-    }
-
-    if (pageHtml.includes("/src/assets/") || pageHtml.includes("/@imagetools/")) {
-      throw new Error("Unresolved source or development image URL while pre-rendering " + route);
-    }
-
-    const [bodyHtml, headHtml] = [rendered.html, rendered.head];
-    let resolvedBody = bodyHtml;
-    for (const mapping of assetMappings) {
-      const asset = manifest[mapping.manifestKey];
-      const productionUrl = "/" + asset.file;
+      const productionUrl = "/" + candidates[0].file;
+      const absoluteProductionUrl = site + productionUrl;
       resolvedBody = resolvedBody.split(mapping.renderedUrl).join(productionUrl);
-    }
-
-    const resolvedHead = assetMappings.reduce((head, mapping) => {
-      const asset = manifest[mapping.manifestKey];
-      const productionUrl = "/" + asset.file;
-      const absoluteSource = site + mapping.renderedUrl;
-      const absoluteProduction = site + productionUrl;
-      return head
-        .split(absoluteSource).join(absoluteProduction)
+      resolvedHead = resolvedHead
+        .split(site + mapping.renderedUrl).join(absoluteProductionUrl)
         .split(mapping.renderedUrl).join(productionUrl);
-    }, headHtml);
+    }
 
     if (
       resolvedBody.includes("/src/assets/") ||
