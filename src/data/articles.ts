@@ -35,6 +35,39 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "dgft-niryat-disha-msme-export-support-2026",
+    image: complianceChecklistImg,
+    imageAvif: complianceChecklistAvif,
+    imageWebp: complianceChecklistWebp,
+    imageAlt: "Export compliance checklist with pen and coffee under warm lamp light",
+    title: "DGFT Expands Niryat Disha Support: What MSME Exporters Should Check",
+    excerpt:
+      "Three DGFT amendments widen the reach of freight support, market-access assistance and eligible export certification under the Export Promotion Mission. Here is what Indian MSME exporters should review before planning an activity or incurring costs.",
+    category: "Trade Policy",
+    date: "Nov 24, 2026",
+    dateISO: "2026-11-24",
+    readTime: "5 min",
+    content: [
+      "Indian MSME exporters may have more routes to seek support for freight, overseas market access and export-related testing or certification. On 17 November 2026, the Directorate General of Foreign Trade issued three amendments under the Niryat Disha sub-scheme of the Export Promotion Mission (EPM): Trade Notice 35/2026-27 for Market Access Support (MAS), Trade Notice 36/2026-27 for Logistics Interventions for Freight and Transport (LIFT), and Trade Notice 37/2026-27 for Trade Regulations, Accreditation and Compliance Enablement (TRACE). The Department of Commerce summarised the changes in a Press Information Bureau release on 18 November 2026.",
+      "Market Access Support: higher airfare-support eligibility. The maximum preceding-year export-turnover threshold for eligible airfare reimbursement for participation in Buyer-Seller Meets, trade fairs and trade delegations has increased from ₹75 lakh to ₹50 crore. Reimbursement has been enhanced to up to 95% of eligible economy-class airfare for Micro and Small enterprises and up to 80% for other eligible exporters. The required membership period with the relevant Export Promotion Council or organising agency has also been reduced from six months to three months. These are subject to the prescribed monetary ceilings, event conditions and other scheme requirements; the percentages are not an unconditional reimbursement of every travel expense.",
+      "LIFT: wider geography and transport coverage. The coverage of low-export-intensity districts has been expanded from 13 States/Union Territories to 34 States/Union Territories. The eligible port categories now include Land Customs Stations and Integrated Check Posts, and waterways have been added alongside road, rail and air transport. Air-freight support has been extended to Jammu & Kashmir and Ladakh in addition to the existing North Eastern Region coverage. The minimum distance criterion between the origin and destination ports has been reduced from 200 km to 100 km. The intervention has also been extended to all exportable merchandise, except products or export categories placed on the scheme's negative list. Exporters must still satisfy the applicable MSME, district, route, distance, documentation and claim conditions.",
+      "TRACE: a wider list of eligible certifications. The list of eligible testing, inspection and certification entries has increased from 462 to 600. The intervention is intended to help MSME exporters address international quality, safety and technical requirements, including relevant mandatory and voluntary conformity-assessment needs. The increase does not mean that every certificate, laboratory test or consultancy expense is automatically reimbursable. Exporters should identify the exact entry applicable to their product and destination market and check the detailed TRACE guidelines before committing expenditure.",
+      "What should an exporter check before applying? First, identify the relevant intervention: MAS for eligible overseas market-access activities, LIFT for qualifying freight and transport support, or TRACE for listed testing, inspection and certification requirements. Second, verify the enterprise's current MSME classification and the preceding-year export-turnover position where relevant. Third, for LIFT, confirm the district, origin and destination points, transport mode, distance and whether the product appears on the negative list. Fourth, for MAS, check the event, organiser, membership period, eligible economy-class fare and applicable regional ceiling. Fifth, for TRACE, match the proposed certification or test to the current eligible list and retain quotations, invoices, payment evidence and the resulting certificate or report.",
+      "The three amendments apply prospectively from 17 November 2026. They amend specified provisions of the existing intervention guidelines; other provisions remain in force. Exporters should therefore read the relevant trade notice together with the underlying operational guidelines and confirm the current application process, implementing agency, budget availability, claim window and documentation requirements before making a financial commitment.",
+      "The commercial opportunity is worth examining, particularly for smaller exporters facing overseas market-development costs, freight disadvantages or destination-market certification expenses. But scheme support should be treated as conditional assistance, not as an assured subsidy or a reason to proceed with an otherwise unviable shipment. A product-market assessment, accurate costing and compliance review remain essential before quoting or exporting."
+    ],
+    sources: [
+      {
+        label: "Press Information Bureau — Department of Commerce amends four Export Promotion Mission interventions (18 November 2026)",
+        url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337815&lang=1&reg=48"
+      },
+      {
+        label: "APEDA / Department of Commerce — DGFT Trade Notice register (see Trade Notices 35, 36 and 37/2026-27)",
+        url: "https://apeda.gov.in/dgft-trade-notice"
+      }
+    ],
+  },
+  {
     slug: "eu-trade-defence-indian-steel-pvdf-exports-2026",
     image: euRegulationsImg,
     imageAvif: euRegulationsAvif,
