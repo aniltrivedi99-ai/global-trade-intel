@@ -320,4 +320,117 @@ export const articles: Article[] = [
       "Use it as a pre-shipment sign-off before every first order to a new destination.",
     ],
   },
+  {
+    slug: "us-section-301-proposed-tariffs-india-14-economies-2026",
+    image: euRegulationsImg,
+    imageAvif: euRegulationsAvif,
+    imageWebp: euRegulationsWebp,
+    imageAlt: "EU flag beside trade-policy documents, representing the European Union among the economies covered by the U.S. Section 301 proposals.",
+    title: "U.S. Section 301 Proposals: India and 13 Other Economies",
+    excerpt:
+      "USTR's 25 November 2026 determinations cover 14 economies. India's proposed additional duties could reach 25%, subject to existing Section 301 duties and specified exemptions. The proposal is open for comment; no effective date is specified in the India notice.",
+    category: "Trade Policy",
+    date: "Nov 27, 2026",
+    dateISO: "2026-11-27",
+    dateModifiedISO: "2026-11-27",
+    autoPublished: true,
+    readTime: "5 min",
+    seoTitle: "U.S. Section 301 Proposals: India & 13 Economies | GTI",
+    seoDescription:
+      "USTR's 25 November Section 301 proposals cover 14 economies. India's proposed extra duties could reach 25%, with exemptions; comments close 5 January 2027.",
+    searchKeywords: [
+      "U.S. Section 301 India proposal 2026",
+      "proposed U.S. tariffs on Indian goods",
+      "USTR Section 301 determinations 14 economies",
+      "India U.S. tariff comment deadline January 2027",
+      "U.S. importer tariff exposure India",
+      "Section 301 tariff exemptions and HTSUS",
+    ],
+    byline: "Global Trade Intell Research Desk",
+    content: [],
+    sections: [
+      {
+        id: "section301-14-economy-determinations",
+        heading: "What USTR announced on 25 November",
+        paragraphs: [
+          "On 25 November 2026, the Office of the U.S. Trade Representative (USTR) announced Section 301 determinations concerning structural excess capacity and manufacturing production in 14 economies: China, the European Union, Singapore, Switzerland, Indonesia, Malaysia, Cambodia, Thailand, Korea, Vietnam, Taiwan, Bangladesh, Japan and India. USTR said it had not made determinations for Mexico or Norway at this stage, although both were among the 16 economies originally investigated.",
+          "USTR determined that the identified acts, policies and practices in the 14 economies are unreasonable and burden or restrict U.S. commerce under Section 301 of the Trade Act of 1974. It also proposed additional duties for public comment. These proposed duties are not currently in force; the India notice does not specify an effective date.",
+        ],
+      },
+      {
+        id: "india-proposed-tariffs-and-comment-dates",
+        heading: "India: proposed duties and the comment timetable",
+        paragraphs: [
+          "For India, USTR proposes to consider additional tariffs of up to 25% on goods of India, net of existing Section 301 tariffs, with specified exemptions. The notice lists certain Section 232-related product categories—including specified metal articles, vehicles and parts, wood products, patented pharmaceutical articles and semiconductor articles—and further product-specific HTSUS lines in an annex. Exporters must check the exact subheading and country of origin; a broad product description is not enough.",
+          "USTR's supporting report highlights steel, solar, health and information and communications technology (ICT), but the proposed tariff action is framed more broadly for goods of India, subject to exclusions. The notice also invites comment on a possible reduced-rate mechanism for certain textile and apparel volumes. USTR proposes to consider a 17% rate if India reaches a responsive Agreement on Reciprocal Trade with the United States. This is conditional proposal language, not a rate now applicable or a guaranteed outcome.",
+          "The India notice sets 5 January 2027 as the deadline for written comments and requests to appear with a summary of testimony. The Section 301 Committee hearing is scheduled to begin on 25 January 2027. Written comments use docket USTR-2026-0731; requests to appear use USTR-2026-0741.",
+        ],
+      },
+      {
+        id: "exporter-importer-action-checklist",
+        heading: "What exporters and U.S. importers should check now",
+        paragraphs: [
+          "Exporters selling to the United States and U.S. importers should build a product-level exposure list: map each item to its U.S. HTSUS subheading and country of origin; compare the line with the notice's exemptions and annex; record existing Section 301 duties and other relevant measures; and model potential exposure separately from current landed cost. A flat 25% uplift across every shipment would be misleading.",
+          "Businesses with affected products may consider submitting evidence on product exclusions, supply availability, potential disruption, textile mechanisms or the proposed rate before the deadline. Submissions should be supported by verifiable product and trade data. Confirm classification and procedure with a U.S. customs broker or trade counsel; do not assume an exemption applies until the relevant HTSUS line and notice conditions are checked.",
+          "GTI can help organise product-level HS/HTS classification, origin and trade-compliance information for a preliminary exposure review. For export-import documentation and customs compliance support, see GTI's Trade Compliance & Documentation service or use the consultation option below.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Are the proposed Section 301 duties on Indian goods already in force?",
+        answer:
+          "No. USTR's India notice invites public comments and schedules a hearing. It does not specify an effective date for the proposed additional duties. They should not be treated as duties currently payable under this investigation.",
+      },
+      {
+        question: "Does the India proposal apply only to steel, solar, health and ICT products?",
+        answer:
+          "No. Those sectors are highlighted in USTR's supporting report, but the proposed tariff action is framed more broadly for goods of India, subject to the notice's specified exemptions and annex. Product-level HTSUS checking is necessary.",
+      },
+      {
+        question: "What are the India comment and hearing dates?",
+        answer:
+          "Written comments and requests to appear with a summary of testimony are due by 5 January 2027. The Section 301 Committee hearing is scheduled to begin on 25 January 2027.",
+      },
+      {
+        question: "Does the proposed 17% rate automatically apply if India signs a trade agreement?",
+        answer:
+          "No. USTR proposes to consider a 17% rate if India reaches a reciprocal trade agreement responsive to the investigation. It is conditional proposal language, not an automatic or currently effective tariff rate.",
+      },
+    ],
+    sources: [
+      {
+        label: "USTR — 25 November 2026 determinations and proposed actions in 14 Section 301 investigations",
+        url: "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
+      },
+      {
+        label: "USTR — India-specific notice of determination and request for comments (PDF; Dockets USTR-2026-0731 and USTR-2026-0741)",
+        url: "https://ustr.gov/sites/default/files/files/Press/Releases/2026/India%20FRN.pdf",
+      },
+      {
+        label: "USTR — Section 301 investigation page with economy-specific notices and reports",
+        url: "https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-structural-excess-capacity-and-production-manufacturing-sectors",
+      },
+      {
+        label: "USTR — India report supporting the Section 301 determination",
+        url: "https://ustr.gov/sites/default/files/files/Press/Releases/2026/USTR%20Report%20Sec.%20301%20Investigation%20Acts%20Policies%20Practices%20INDIA%20relating%20to%20Struc%20Excess%20Cap%20and%20Prod%20in%20Mfr%20Sectors.pdf",
+      },
+      {
+        label: "U.S. Code — 19 U.S.C. § 2411, Actions by United States Trade Representative",
+        url: "https://uscode.house.gov/us/usc/119-120/t19/s2411/",
+      },
+      {
+        label: "USTR — Official portal for written comments and hearing requests",
+        url: "https://comments.ustr.gov/s/",
+      },
+      {
+        label: "GTI related guide — Export Compliance Checklist for New Exporters",
+        url: "https://www.globaltradeintell.com/insights/export-compliance-checklist",
+      },
+      {
+        label: "GTI service — Trade Compliance & Documentation",
+        url: "https://www.globaltradeintell.com/services",
+      },
+    ],
+  },
 ];
