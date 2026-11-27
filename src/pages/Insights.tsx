@@ -12,6 +12,14 @@ const categoryColors: Record<string, string> = {
   Compliance: "bg-accent/10 text-accent",
 };
 
+const sortedArticles = [...articles].sort((a, b) => {
+  const dateA = Date.parse(a.dateISO || a.date);
+  const dateB = Date.parse(b.dateISO || b.date);
+  const timestampA = Number.isFinite(dateA) ? dateA : 0;
+  const timestampB = Number.isFinite(dateB) ? dateB : 0;
+  return timestampB - timestampA;
+});
+
 const Insights = () => (
   <div>
     <SEO
@@ -31,7 +39,7 @@ const Insights = () => (
 
     <section className="container py-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((a) => (
+        {sortedArticles.map((a) => (
           <Link
             to={`/insights/${a.slug}`}
             key={a.slug}
